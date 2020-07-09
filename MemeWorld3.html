@@ -1,0 +1,1214 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Meme world </title>
+        <script src="assets/js/aframe.js"></script>
+        <script src="https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js"></script>
+        <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+        <script src="https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.min.js"></script>
+        <script src="https://unpkg.com/aframe-gradient-sky@1.0.4/dist/gradientsky.min.js"></script>
+        <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+         <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+
+        
+        <script>
+  AFRAME.registerComponent("foo", {
+    init: function() {
+      var self = this.el
+      var fadeInAnim = document.querySelector("#fadein-animation")
+      var fadeOutAnim = document.querySelector("#fadeout-animation")
+			var images = ["https://i.imgur.com/wjobVTN.jpg","https://i.imgur.com/ckV2MrC.jpg"]
+      var switchflip = 1
+      fadeOutAnim.addEventListener("animationend", (e) => {
+        self.setAttribute("material", "src", images[switchflip])
+        switchflip = switchflip === 1 ? 0 : 1
+        self.emit('fadein')
+      })
+      fadeInAnim.addEventListener("animationend", (e) => {
+        setTimeout(function() {
+        self.emit('fadeout')
+      }, 5000)
+      })
+      setTimeout(function() {
+        self.emit('fadeout')
+      }, 5000)
+    }
+  })
+
+</script>
+        
+        
+        
+        
+        
+        
+    </head>
+    <body>
+
+<a-scene inspector background="color: #000" >
+            
+     <a-assets>
+        
+
+         
+        <a-asset-item id="gltf" src="assets/meme1.gltf"> </a-asset-item> 
+         
+        <video id="video1" src="assets/200705%20juice%20box%20oks.mp4"></video>
+         
+         
+       
+    
+        
+        <a-mixin id="meme2x" material="color: tomato"></a-mixin>
+         
+         <img id="meme1" src="assets/meme1.jpg" >
+         <img id="meme3" src="assets/meme3.jpg" >
+         <img id="meme2" src="assets/meme2.jpg" >
+         <img id="meme4" src="assets/meme4.png" >
+         <img id="meme5" src="assets/meme5.jpeg" >
+         <img id="meme6" src="assets/meme6.jpg" >
+         <img id="meme7" src="assets/meme7.jpg" >
+         <img id="meme8" src="assets/meme8.jpg" >
+         <img id="meme9" src="assets/meme9.jpg" >
+         <img id="meme10" src="assets/meme10.jpeg" >
+         
+        <a-mixin  
+           id="appear"     
+           event-set__enter="_event: mouseenter; opacity: 1; dur: 1000"
+           event-set__leave="_event: mouseleave; opacity: 1" 
+        ></a-mixin>
+         
+         
+        <a-mixin
+           id="meme-display"      
+           geometry=" depth: 0.1; height: 1; width: 1"
+           material="color: white"
+           scale="0.8 0.8 0.8"
+            >
+                      
+        </a-mixin>
+         
+         
+         <a-mixin
+           id="rotating"
+           animation__rotate="property: rotation; to: 0 360 0; dur:80000; easing: linear; loop: -1;" 
+                  
+         ></a-mixin>
+         
+         
+         
+        
+     </a-assets> 
+    
+    
+
+             <a-text
+            value="MEMESPHERE"
+            position=" 0 0 2"
+            color="white"></a-text>
+
+
+
+
+<a-entity light="intensity: 1.3" position="5 10 1" color="#fff"  ></a-entity> 
+    
+ <!-- <a-video src="assets/200705%20juice%20box%20ok.mp4" position="0 4.5 -14" width="4" height="5" opacity="0"
+            event-set__enter="_event: mouseenter; opacity: 1"
+           event-set__leave="_event: mouseleave; opacity: 1"
+           ></a-video>
+
+  <a-video src="assets/200705%20juice%20box%20ok.mp4" width="2" height="1" position="2 2 -2" autoplay="true"></a-video>
+        
+
+   
+    <a-sky material="opacity:1; src: https://i.imgur.com/wjobVTN.jpg" foo>  </a-sky>
+-->
+    
+    
+ <a-entity mixin="rotating">  
+
+
+     <a-entity mixin="rotating">   
+    <!-- middle
+
+FRONT1 -->
+    
+
+    
+    
+<a-box
+    position="1 2.5 -3"    
+    opacity="0"
+    mixin="appear meme-display rotating"
+    material="shader: flat; src: #meme1"
+       
+      
+   >
+        
+></a-box>     
+    
+    <a-box
+    position="2 2.5 -3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme10"
+ 
+        
+></a-box>  
+    
+    
+    <a-box
+    position="3 2.5 -3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme3"
+        
+     
+></a-box>      
+    
+    
+<a-box
+    position="-1 2.5 -3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme9"
+        
+></a-box>  
+    
+    <a-box
+    position="-2 2.5 -3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme4"
+        
+></a-box>  
+    
+    
+<a-box
+    position="-3 2.5 -3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme1"
+
+        
+></a-box>  
+    
+ <a-box
+    position="-0 2.5 -3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme7"
+        
+></a-box>  
+
+    
+  
+    
+   
+    
+    <!-- BACK-->
+    
+    
+    
+    
+
+    <a-box
+    position="0 2.5 3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme4"
+   
+        
+></a-box>     
+    
+    
+<a-box
+    position="1 2.5 3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme2"
+   
+        
+></a-box>     
+    
+<a-box
+    position="2 2.5 3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme3"
+        
+></a-box>  
+    
+    
+<a-box
+    position="3 2.5 3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme5"
+        
+></a-box>      
+    
+<a-box
+    position="-1 2.5 3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme9"
+        
+></a-box>  
+    
+    <a-box
+    position="-2 2.5 3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme6"
+        
+></a-box>  
+    
+    
+<a-box
+    position="-3 2.5 3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme6"
+
+        
+></a-box>  
+ 
+ 
+    
+    
+    
+<!-- SIDES-->
+    
+
+      <!-- left-->
+
+    
+<a-box
+       
+    position="-3.5 2.5 0.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme1"
+       
+></a-box>    
+    
+<a-box
+       
+    position="-3.5 2.5 1.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme5"
+       
+></a-box>    
+    
+    
+<a-box
+       
+    position="-3.5 2.5 2.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme7"
+       
+></a-box>    
+    
+<a-box
+       
+    position="-3.5 2.5 -2.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme2"
+       
+></a-box>        
+
+<a-box
+       
+    position="-3.5 2.5 -1.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme10"
+       
+></a-box>    
+    
+<a-box
+       
+    position="-3.5 2.5 -0.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme9"
+       
+></a-box>   
+    
+    
+    
+    
+    
+    
+    
+    <!-- right-->
+    
+    
+<a-box
+       
+    position="3.5 2.5 0.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme4"
+       
+></a-box>    
+    
+<a-box
+       
+    position="3.5 2.5 1.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme3"
+       
+></a-box>    
+    
+    
+<a-box
+       
+    position="3.5 2.5 2.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme8"
+       
+></a-box>    
+    
+<a-box
+       
+    position="3.5 2.5 -2.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme2"
+       
+></a-box>        
+
+<a-box
+       
+    position="3.5 2.5 -1.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme3"
+       
+></a-box>    
+    
+<a-box
+       
+    position="3.5 2.5 -0.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme10"
+       
+></a-box>  
+    
+    </a-entity>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+<!-- 3rd row HIGH-->
+    
+    
+    
+<a-entity> 
+    
+   <!-- FRONT1 -->
+    
+<a-box
+    position="0 3.75 -3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme3"
+   
+        
+></a-box>     
+    
+    
+<a-box
+    position="1 3.75 -3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme4"
+   
+        
+></a-box>     
+    
+    <a-box
+    position="2 3.75 -3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme5"
+        
+></a-box>  
+    
+    
+    <a-box
+    position="3 3.75 -3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme6"
+        
+></a-box>      
+    
+    
+<a-box
+    position="-1 3.75 -3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme7"
+        
+></a-box>  
+    
+    <a-box
+    position="-2 3.75 -3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme8"
+        
+></a-box>  
+    
+    
+<a-box
+    position="-3 3.75 -3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme9"
+
+        
+></a-box>  
+
+    
+  
+    
+   
+    
+    <!-- BACK-->
+    
+    
+    
+    
+
+    <a-box
+    position="0 3.75 3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme10"
+   
+        
+></a-box>     
+    
+    
+<a-box
+    position="1 3.75 3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme1"
+   
+        
+></a-box>     
+    
+<a-box
+    position="2 3.75 3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme2"
+        
+></a-box>  
+    
+    
+<a-box
+    position="3 3.75 3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme3"
+        
+></a-box>      
+    
+<a-box
+    position="-1 3.75 3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme4"
+        
+></a-box>  
+    
+    <a-box
+    position="-2 3.75 3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme5"
+        
+></a-box>  
+    
+    
+<a-box
+    position="-3 3.75 3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme6"
+
+        
+></a-box>  
+ 
+ 
+    
+    
+    
+<!-- SIDES-->
+    
+
+      <!-- left-->
+
+    
+<a-box
+       
+    position="-3.5 3.75 0.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme7"
+       
+></a-box>    
+    
+<a-box
+       
+    position="-3.5 3.75 1.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme8"
+       
+></a-box>    
+    
+    
+<a-box
+       
+    position="-3.5 3.75 2.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme9"
+       
+></a-box>    
+    
+<a-box
+       
+    position="-3.5 3.75 -0.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme10"
+       
+></a-box>        
+
+<a-box
+       
+    position="-3.5 3.75 -1.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme2"
+       
+></a-box>    
+    
+<a-box
+       
+    position="-3.5 3.75 -2.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme3"
+       
+></a-box>   
+    
+    
+    
+    
+    
+    
+    
+    <!-- right-->
+    
+    
+<a-box
+       
+    position="3.5 3.75 0.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme4"
+       
+></a-box>    
+    
+<a-box
+       
+    position="3.5 3.75 1.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme5"
+       
+></a-box>    
+    
+    
+<a-box
+       
+    position="3.5 3.75 2.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme7"
+       
+></a-box>    
+    
+<a-box
+       
+    position="3.5 3.75 -0.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme2"
+       
+></a-box>        
+
+<a-box
+       
+    position="3.5 3.75 -1.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme9"
+       
+></a-box>    
+    
+<a-box
+       
+    position="3.5 3.75 -2.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme8"
+       
+></a-box>  
+    
+    
+    
+</a-entity>  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   <!-- 1st row LOW --> 
+    
+    
+   <a-entity> 
+    
+   <!-- FRONT1 -->
+    <a-entity position=" 0 -1 0">
+<a-box
+    position="0 1.25 -3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme2"
+   
+        
+></a-box>     
+    
+    
+<a-box
+    position="1 1.25 -3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme3"
+   
+        
+></a-box>     
+    
+    <a-box
+    position="2 1.25 -3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme4"
+        
+></a-box>  
+    
+    
+    <a-box
+    position="3 1.25 -3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme6"
+        
+></a-box>      
+    
+    
+<a-box
+    position="-1 1.25 -3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme8"
+        
+></a-box>  
+    
+    <a-box
+    position="-2 1.25 -3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme10"
+        
+></a-box>  
+    
+    
+<a-box
+    position="-3 1.25 -3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme5"
+
+        
+></a-box>  
+    
+    
+  
+    </a-entity>
+   
+    
+    <!-- BACK-->
+    
+    
+    
+    
+
+    <a-box
+    position="0 1.25 3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme7"
+   
+        
+></a-box>     
+    
+    
+<a-box
+    position="1 1.25 3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme9"
+   
+        
+></a-box>     
+    
+<a-box
+    position="2 1.25 3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme1"
+        
+></a-box>  
+    
+    
+<a-box
+    position="3 1.25 3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme3"
+        
+></a-box>      
+    
+<a-box
+    position="-1 1.25 3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme4"
+        
+></a-box>  
+    
+    <a-box
+    position="-2 1.25 3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme5"
+        
+></a-box>  
+    
+    
+<a-box
+    position="-3 1.25 3"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme7"
+
+        
+></a-box>  
+ 
+ 
+    
+    
+    
+<!-- SIDES-->
+    
+
+      <!-- left-->
+       
+       
+    
+
+    
+<a-box
+       
+    position="-3.5 1.25 -0.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme10"
+       
+></a-box>    
+    
+<a-box
+       
+    position="-3.5 1.25 -1.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme8"
+       
+></a-box>    
+    
+    
+<a-box
+       
+    position="-3.5 1.25 -2.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme6"
+       
+></a-box>    
+    
+<a-box
+       
+    position="-3.5 1.25 0.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme5"
+       
+></a-box>        
+
+<a-box
+       
+    position="-3.5 1.25 1.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme3"
+       
+></a-box>    
+    
+<a-box
+       
+    position="-3.5 1.25 2.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme4"
+       
+></a-box>   
+    
+    
+    
+    
+    
+    
+    
+    <!-- right-->
+    
+    
+<a-box
+       
+    position="3.5 1.25 0.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme10"
+       
+></a-box>    
+    
+<a-box
+       
+    position="3.5 1.25 1.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme9"
+       
+></a-box>    
+    
+    
+<a-box
+       
+    position="3.5 1.25 2.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme8"
+       
+></a-box>    
+    
+<a-box
+       
+    position="3.5 3.75 -0.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme5"
+       
+></a-box>        
+
+<a-box
+       
+    position="3.5 1.25 -1.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme6"
+       
+></a-box>    
+    
+<a-box
+       
+    position="3.5 1.25 -2.5"
+    rotation="0 90 0"   
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme7"
+       
+></a-box>  
+   
+    
+    
+</a-entity>      
+    
+    
+    
+    
+    
+    
+    
+<!-- CEILING-->
+    
+<a-box
+       
+    position="2 4.5 -2"
+    rotation="90 0 0" 
+    scale="2 2 2"
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme8"
+       
+></a-box>  
+    
+<a-box
+       
+    position="0 4.5 -2"
+    rotation="90 0 0" 
+    scale="2 2 2"
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme10"
+       
+></a-box>      
+    
+<a-box
+       
+    position="-2 4.5 -2"
+    rotation="90 0 0" 
+    scale="2 2 2"
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme9"
+       
+></a-box>  
+    
+    
+    <a-box
+       
+    position="2 4.5 2"
+    rotation="90 0 0" 
+    scale="2 2 2"
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme3"
+       
+></a-box>  
+    
+<a-box
+       
+    position="0 4.5 2"
+    rotation="90 0 0" 
+    scale="2 2 2"
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme5"
+       
+></a-box>      
+    
+<a-box
+       
+    position="-2 4.5 2"
+    rotation="90 0 0" 
+    scale="2 2 2"
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme4"
+       
+></a-box> 
+    
+    
+    
+   </a-entity>
+    
+  <!-- -
+
+
+ animation__mouseenter="property: components.material.material.src; type: material; from: #meme2; to: #meme3; startEvents: mouseenter; dur: 500"
+
+
+
+
+    
+    <a-box
+    position="0 1 0"    
+    opacity="1"
+    mixin=" meme-display"
+    material="shader: flat; src: #meme1"
+    animation__material="_event: mouseenter; dur:500; easing:linear; from:#meme1; to:#meme2; property: material.src"
+        
+></a-box>
+
+ 
+    
+<a-box
+    position="0 2.5 0"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme2"
+        
+></a-box>  
+    
+
+<a-box
+    position="1.5 1 0"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme3"
+        
+></a-box>    
+    
+    
+<a-box
+    position="1.5 2.5 0"    
+    opacity="0"
+    mixin="appear meme-display"
+    material="shader: flat; src: #meme4"
+        
+></a-box>    
+    
+
+
+    
+    <a-box position="1 0.5 -3" rotation="0 45 0" color="#4CC3D9" opacity="0"
+           event-set__enter="_event: mouseenter; opacity: 1"
+           event-set__leave="_event: mouseleave; opacity: 1" ></a-box>
+    
+    
+    <a-box position="-1 0.5 -3" rotation="0 45 0" opacity="0.5" color
+           event-set__enter="_event: mouseenter; color: black; opacity: 1; dur 500"
+           event-set__leave="_event: mouseleave; opacity: 1; dur 500"
+               
+     ></a-box>
+-->
+
+      
+   <a-camera position="0 1.6 0" >
+      <a-cursor></a-cursor>
+    </a-camera>
+        
+    
+    
+ <a-entity laser-controls="hand: left"></a-entity>
+ <a-entity laser-controls="hand: right"></a-entity>
+ <a-entity oculus-go-controls ></a-entity>
+
+    
+   
+        
+   <!--   <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"
+           event-set__enter="_event: mouseenter; _target: #text; visible: true"
+           event-set__leave="_event: mouseleave; _target: #text; visible: false">
+        <a-text id="text" value="wtf" align="center" color="#FFF" visible="false" position="0 -0.55 0.55"></a-text>
+    </a-box> 
+
+
+   
+   
+-->
+    
+<!-- PARTICLES   <a-entity id="snow" particle-system="preset: snow; color: white; particleCount: 1000"></a-entity>  
+
+ 
+  -->
+    
+    
+     <!-- animation__scale="dur:2000; easing:linear; from:0.01 0.01 0.01; to:0.011 0.011 0.011; loop: -1; property:scale" -->
+    
+   <!-- <a-entity environment="presset: forest"></a-entity>
+    <a-entity camera="" position="0 1.5 1" wasd-controls="" rotation="" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="">
+    </a-entity> -->
+
+    
+    
+  
+
+</a-scene>
+     
+
+
+</body>
+
+</html>
+
+
