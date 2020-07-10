@@ -15,11 +15,11 @@
     </head>
     <body>
 
-<a-scene inspector background="color: #000" >
+<a-scene inspector >
             
      <a-assets>
 
-         <video id="video1" src="assets/200705%20juice%20box%20oks.mp4"></video>
+         <video id="meme1" src="assets/MilkLoop.mp4"></video>
          
          
        
@@ -27,7 +27,7 @@
         
         <a-mixin id="meme2x" material="color: tomato"></a-mixin>
          
-         <img id="meme1" src="assets/meme1.jpg" >
+         <img id="meme1x" src="assets/meme1.jpg" >
          <img id="meme3" src="assets/meme3.jpg" >
          <img id="meme2" src="assets/meme2.jpg" >
          <img id="meme4" src="assets/meme4.png" >
@@ -68,6 +68,9 @@
      </a-assets> 
     
     
+    
+    
+    <a-entity environment="preset: forest"></a-entity>
    
     
     
@@ -105,7 +108,7 @@ FRONT1 -->
     position="1 2.5 -3"    
     opacity="0"
     mixin="appear meme-display rotating"
-    material="shader: flat; src: #meme1"
+    material="shader: flat; src:assets/MilkLoop.mp4"
        
       
    >
@@ -116,7 +119,7 @@ FRONT1 -->
     position="2 2.5 -3"    
     opacity="0"
     mixin="appear meme-display"
-    material="shader: flat; src: #meme10"
+    material="shader: flat;  src:assets/MilkLoop.mp4"
  
         
 ></a-box>  
@@ -126,7 +129,7 @@ FRONT1 -->
     position="3 2.5 -3"    
     opacity="0"
     mixin="appear meme-display"
-    material="shader: flat; src: #meme3"
+    material="shader: flat; src:assets/MilkLoop.mp4"
         
      
 ></a-box>      
@@ -136,7 +139,7 @@ FRONT1 -->
     position="-1 2.5 -3"    
     opacity="0"
     mixin="appear meme-display"
-    material="shader: flat; src: #meme9"
+    material="shader: flat; src:assets/MilkLoop.mp4"
         
 ></a-box>  
     
@@ -144,7 +147,7 @@ FRONT1 -->
     position="-2 2.5 -3"    
     opacity="0"
     mixin="appear meme-display"
-    material="shader: flat; src: #meme4"
+    material="shader: flat; src:assets/MilkLoop.mp4"
         
 ></a-box>  
     
@@ -153,7 +156,7 @@ FRONT1 -->
     position="-3 2.5 -3"    
     opacity="0"
     mixin="appear meme-display"
-    material="shader: flat; src: #meme1"
+    material="shader: flat; src:assets/MilkLoop.mp4"
 
         
 ></a-box>  
@@ -162,7 +165,7 @@ FRONT1 -->
     position="-0 2.5 -3"    
     opacity="0"
     mixin="appear meme-display"
-    material="shader: flat; src: #meme7"
+    material="shader: flat; src:assets/MilkLoop.mp4"
         
 ></a-box>  
 
@@ -1983,8 +1986,14 @@ FRONT1 -->
       <a-cursor></a-cursor>
     </a-camera>
         
-
+ <a-entity laser-controls="hand: left"></a-entity>
+ <a-entity laser-controls="hand: right"></a-entity>
+ <a-entity oculus-go-controls ></a-entity>
   
+    
+    
+    
+    
 
 </a-scene>
      
