@@ -15,7 +15,7 @@
     </head>
     <body>
 
-<a-scene inspector >
+<a-scene inspector background="color : black">
             
      <a-assets>
 
@@ -67,10 +67,16 @@
         
      </a-assets> 
     
+  <!-- EXTRAS -->  
     
     
+<!-- ENVIRONMENT  <a-entity environment="preset: forest"></a-entity> -->
     
-  <!--  <a-entity environment="preset: forest"></a-entity> -->
+    
+<!-- PARTICLES -->  
+    
+ 
+<a-entity id="snow" particle-system="preset: snow; color: white; particleCount: 1000"></a-entity>      
    
     
     
