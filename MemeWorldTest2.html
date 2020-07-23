@@ -8,14 +8,17 @@
         <script src="https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.min.js"></script>
         <script src="https://unpkg.com/aframe-gradient-sky@1.0.4/dist/gradientsky.min.js"></script>
         <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
-         <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+        <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+        
+        <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+        <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
 
        
 
     </head>
     <body>
 
-<a-scene inspector background="color : black">
+<a-scene inspector background="color : black" anti-alias>
             
      <a-assets>
 
@@ -79,10 +82,39 @@
 <a-entity id="snow" particle-system="preset: snow; color: white; particleCount: 1000"></a-entity>  
 -->  
     
+    
+    
+    
+    
+    
+    <a-entity movement-controls="fly: true" position="0 0 0">
+    
+    
+        <a-camera position="0 1.6 0" >
+            
+            <a-cursor></a-cursor>
+       
+       
+        </a-camera>
+    
+    
+    </a-entity>
  
     
+    
+       
    
-    <!-- platform -->
+        
+ <a-entity laser-controls="hand: left"></a-entity>
+ <a-entity laser-controls="hand: right"></a-entity>
+ <a-entity oculus-go-controls ></a-entity>
+  
+    
+    
+    
+    
+   
+    <!-- platform --> 
     
     <a-box
         position="0 0 0"
@@ -90,8 +122,8 @@
         height="0.2"
         depth="100"
         
-        material="src: #meme1"
-        animation="property: material.src; to: #meme2; dur: 500, loop: -1"
+        material="color: white"
+        animation="property: material.src; to: #meme2; dur: 500"
           
            
            ></a-box>
@@ -1992,17 +2024,7 @@ FRONT1 -->
     
 
 
-      
-   <a-camera position="0 1.6 0" >
-      <a-cursor></a-cursor>
-    </a-camera>
-        
- <a-entity laser-controls="hand: left"></a-entity>
- <a-entity laser-controls="hand: right"></a-entity>
- <a-entity oculus-go-controls ></a-entity>
-  
-    
-    
+   
     
     
 
