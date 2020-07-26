@@ -43,6 +43,8 @@
          <img id="meme10" src="assets/meme10.jpeg" >
          
          
+         <audio id="sound1" src="assets/sound1.mp3"></audio>       
+         
         <a-mixin  
            id="appear"     
            event-set__enter="_event: mouseenter; opacity: 1; dur: 1000"
@@ -121,9 +123,10 @@
         width="1"
         height="0.2"
         depth="100"
-        
-        material="color: white"
-        animation="property: material.src; to: #meme2; dur: 500"
+        color="white"
+        sound="src : #sound1;
+               on : click"
+     
           
            
            ></a-box>
