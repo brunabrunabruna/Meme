@@ -12,6 +12,7 @@
         
         <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
         <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
+        <script src="https://unpkg.com/super-hands@3.0.0/dist/super-hands.min.js"></script>
 
        
 
@@ -22,8 +23,8 @@
             
      <a-assets>
 
-         <video id="meme1" src="assets/MilkLoop.mp4"></video>
-         <video id="memevideo1" src="assets/TrumpBarbie.mp4"></video>
+         <video id="memevideo1" src="assets/MilkLoop.mp4"></video>
+         <video id="memevideo2" src="assets/TrumpBarbie.mp4"></video>
          
          
        
@@ -31,9 +32,9 @@
         
         <a-mixin id="meme2x" material="color: tomato"></a-mixin>
          
-         <img id="meme1x" src="assets/meme1.jpg" >
-         <img id="meme3" src="assets/meme3.jpg" >
-         <img id="meme2" src="assets/meme2.jpg" >
+         <img id="meme1" src="assets/meme1.jpg" >
+         <img id="meme2" src="assets/meme3.jpg" >
+         <img id="meme3" src="assets/meme2.jpg" >
          <img id="meme4" src="assets/meme4.png" >
          <img id="meme5" src="assets/meme5.jpeg" >
          <img id="meme6" src="assets/meme6.jpg" >
@@ -74,6 +75,10 @@
         
      </a-assets> 
     
+    
+    
+   
+    
   <!-- EXTRAS -->  
     
     
@@ -105,7 +110,7 @@
     
     
        
-   
+<a-entity progressive-controls laser-controls ></a-entity> 
         
  <a-entity laser-controls="hand: left"></a-entity>
  <a-entity laser-controls="hand: right"></a-entity>
@@ -125,7 +130,7 @@
         depth="100"
         color="white"
         sound="src : #sound1;
-               autoplay: true;
+               on: click;
                volume: 1;
                refDistance: 1;
                rollofFactor: 1"
@@ -183,7 +188,7 @@ FRONT1 -->
     position="3 2.5 -3"    
     opacity="0"
     mixin="appear meme-display"
-    material="shader: flat; src:assets/MilkLoop.mp4"
+    material="shader: flat; src: #meme1"
         
      
 ></a-box>      
@@ -193,7 +198,7 @@ FRONT1 -->
     position="-1 2.5 -3"    
     opacity="0"
     mixin="appear meme-display"
-    material="shader: flat; src:assets/MilkLoop.mp4"
+    material="shader: flat; src: #meme2"
         
 ></a-box>  
     
@@ -201,7 +206,7 @@ FRONT1 -->
     position="-2 2.5 -3"    
     opacity="0"
     mixin="appear meme-display"
-    material="shader: flat; src:assets/MilkLoop.mp4"
+    material="shader: flat; src: #meme3"
         
 ></a-box>  
     
@@ -210,7 +215,7 @@ FRONT1 -->
     position="-3 2.5 -3"    
     opacity="0"
     mixin="appear meme-display"
-    material="shader: flat; src:assets/MilkLoop.mp4"
+    material="shader: flat; src: #meme4"
 
         
 ></a-box>  
@@ -219,7 +224,7 @@ FRONT1 -->
     position="-0 2.5 -3"    
     opacity="0"
     mixin="appear meme-display"
-    material="shader: flat; src:assets/MilkLoop.mp4"
+    material="shader: flat; src: #meme5"
         
 ></a-box>  
 

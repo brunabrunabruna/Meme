@@ -1,0 +1,49 @@
+<head>
+  <title>My A-Frame Scene</title>
+  <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+  <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
+   <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script> 
+    
+    
+    
+    
+</head>
+
+<body>
+  <a-scene>
+    
+    <a-entity id="cameraRig">
+      <a-camera />
+      <a-entity
+        teleport-controls="cameraRig: #cameraRig"
+        gearvr-controls
+        oculus-go-controls
+        progressive-controls 
+        laser-controls
+        
+                
+       />
+    </a-entity>
+
+        
+ <a-entity laser-controls="hand: left"></a-entity>
+ <a-entity laser-controls="hand: right"></a-entity>
+
+  <a-entity oculus-go-controls="hand: right"></a-entity>
+      
+      
+      
+      
+      
+   <a-entity environment="preset: forest"></a-entity>
+ 
+      
+    
+      
+    <a-plane color="red" shader="flat" rotation="-90 0 0" position="0 -1 0" ></a-plane>  
+    <a-box color="yellow" position="0 0 -3"></a-box>
+    
+    
+    
+    </a-scene>
+</body>
