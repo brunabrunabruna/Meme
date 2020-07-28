@@ -67,9 +67,9 @@
          
          
          <a-mixin  
-           id="play audio"     
-           event-set__enter="_event: trackpaddown; opacity: 1; dur: 1000"
-           event-set__leave="_event: mouseleave; opacity: 1" 
+           id="play-audio"     
+           event-set__enter="_event: triggerddown; opacity: 1; dur: 1000"
+           event-set__leave="_event: triggerup; opacity: 1" 
         ></a-mixin>
          
          
@@ -140,14 +140,15 @@
    
     <!-- platform --> 
     
-    <a-box
+    <a-box mixin="play-audio"
+        opacity="0"
         position="0 0 0"
         width="1"
         height="0.2"
         depth="100"
         color="pink"
         sound="src : #sound1;
-               on: click;
+            
                volume: 1;
                refDistance: 1;
                rollofFactor: 1"
