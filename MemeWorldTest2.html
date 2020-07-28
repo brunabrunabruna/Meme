@@ -7,7 +7,10 @@
         <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
         <script src="https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.min.js"></script>
         <script src="https://unpkg.com/aframe-gradient-sky@1.0.4/dist/gradientsky.min.js"></script>
-        <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+        
+        
+         <script src="https://unpkg.com/aframe-event-set-component@5.0.0/dist/aframe-event-set-component.min.js"></script>
+        
         <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
         
         <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
@@ -27,7 +30,7 @@
     </head>
     <body>
 
-<a-scene inspector background="color : black" anti-alias>
+<a-scene inspector background="color : black">
             
      <a-assets>
 
@@ -57,6 +60,15 @@
         <a-mixin  
            id="appear"     
            event-set__enter="_event: mouseenter; opacity: 1; dur: 1000"
+           event-set__leave="_event: mouseleave; opacity: 1" 
+        ></a-mixin> 
+         
+         
+         
+         
+         <a-mixin  
+           id="play audio"     
+           event-set__enter="_event: trackpaddown; opacity: 1; dur: 1000"
            event-set__leave="_event: mouseleave; opacity: 1" 
         ></a-mixin>
          
@@ -116,6 +128,9 @@
       
       </a-entity>
     
+    
+    <!-- Match Oculus Go controller if present, regardless of hand. -->
+<a-entity oculus-go-controls></a-entity>
        
 
     
