@@ -21,11 +21,23 @@
       <a-assets>
              
           <audio id="sound1" src="assets/sound1.mp3"></audio>
+          
+          <audio id="sound1" src="assets/sound1.mp3"></audio>
+          
           <img id="checkpoint-img" src="assets/meme1.jpg">
           
+          <video id="video1" src="assets/MilkLoop.mp4"></video>
           
-          
-          
+         <img id="meme1" src="assets/meme1.jpg" >
+         <img id="meme2" src="assets/meme2.jpg" >
+         <img id="meme3" src="assets/meme3.jpg" >
+         <img id="meme4" src="assets/meme4.png" >
+         <img id="meme5" src="assets/meme5.jpeg" >
+         <img id="meme6" src="assets/meme6.jpg" >
+         <img id="meme7" src="assets/meme7.jpg" >
+         <img id="meme8" src="assets/meme8.jpg" >
+         <img id="meme9" src="assets/meme9.jpg" >
+         <img id="meme10" src="assets/meme10.jpeg" >
           
           
           
@@ -34,6 +46,16 @@
            event-set__enter="_event: mouseenter; opacity: 1; dur: 1000"
            event-set__leave="_event: mouseleave; opacity: 1" 
         ></a-mixin> 
+          
+          
+          
+          <a-mixin  
+           id="appear"     
+           event-set__enter="_event: mouseenter; opacity: 1; dur: 1000"
+           event-set__leave="_event: mouseleave; opacity: 1" 
+                 
+                 
+        ></a-mixin> 
       
       
       </a-assets>
@@ -41,7 +63,91 @@
       
       
         
-  <!--    <a-entity 
+<!-- CAMERA -->
+         
+      
+      <a-entity id="cam-rig" movement-controls="speed: 0.15" position="0 0 0">
+        <a-entity
+                  
+            camera position="0 1.6 0"
+            look-controls>
+        
+            <a-cursor></a-cursor>
+            
+        </a-entity>
+      
+      </a-entity>
+    
+        
+<!-- Match Oculus Go controller if present, regardless of hand. -->
+      <a-entity oculus-go-controls></a-entity>
+       
+    
+<!-- ENVIRONMENT -->
+      
+      <a-entity environment="preset: starry"></a-entity>
+      
+<!--     SCENE OBJECTS   -->
+
+      <a-image src="#checkpoint-img" position=" -3 2.5 -3"   checkpoint="offset: -1 0 0" 
+               look-at="#cam-rig">
+      </a-image>
+    
+      
+   
+      
+        <a-box 
+        position="-3 2.5 -5"
+        opacity="1"
+        width="2"
+        height="5"
+        depth="2"
+        material="src: #meme2;
+                  shader: flat;
+                  repeat: 1 2;
+                  "
+             
+        sound="src : #sound1;
+               on: click;
+               volume: 1;
+               refDistance: 1;
+               rollofFactor: 1"
+             
+             
+        ></a-box>
+      
+
+      <a-box 
+        position="3 2.5 -5"
+        opacity="1"
+        width="2"
+        height="5"
+        depth="2"
+        material="src: #meme3;
+                  shader: flat;
+                  repeat: 1 2;"
+             
+        sound="src : #sound1;
+               on: click;
+               volume: 1;
+               refDistance: 1;
+               rollofFactor: 1"
+             
+             
+        ></a-box>
+      
+  
+      
+        
+ 
+  
+      
+      
+      
+      
+      
+      
+       <!--    <a-entity 
                 id="cam-rig"
                 movement-controls="controls: checkpoint"
                 checkpoint-controls="mode: animate">
@@ -59,41 +165,47 @@
 -->
       
       
+       
       
-         
       
-      <a-entity id="cam-rig" movement-controls="speed: 0.15" position="0 0 0">
-        <a-entity
-                  
-            camera position="0 1.6 0"
-            look-controls>
+  <!--      
+    <a-box color="yellow" position="1 0 -3"
         
-            <a-cursor></a-cursor>
-            
-            
-        </a-entity>
-      
-      
-      
-      </a-entity>
+            sound="src : #sound1;
+               on: triggerdown;
+               volume: 1;
+               refDistance: 1;
+               rollofFactor: 1"  >
+           
+         
+            <a-animation attribute="rotation"
+               dur="3000"
+               fill="forwards"
+               to="0 360 0"
+               direction="alternate"
+               begin="click"></a-animation>
+           
+         </a-box>
     
       
       
       
-    
-
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow
+         <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow
              event-set__enter="_event: mouseenter; color: #026fc9"
              event-set__leave="_event: mouseleave; color: #4CC3D9">
-        <!-- This animation begins when the box is clicked with the mouse. -->
-        <a-animation attribute="rotation"
+        <!-- This animation begins when the box is clicked with the mouse. 
+       
+      
+      
+      
+      <a-animation attribute="rotation"
                dur="3000"
                fill="forwards"
                to="0 360 0"
                direction="alternate"
                begin="click"></a-animation>
       </a-box>
-      
+      -->
       
       
       
@@ -115,52 +227,8 @@
  <a-entity oculus-go-controls="hand: left"></a-entity>
  <a-entity oculus-go-controls="hand: right"></a-entity>
   -->
-
-      <a-image src="#checkpoint-img" position=" -3 2.5 -3"   checkpoint="offset: -1 0 0" 
-               look-at="#cam-rig"
-               
-               ></a-image>
     
-      
-   
     
-    <!-- Match Oculus Go controller if present, regardless of hand. -->
-<a-entity oculus-go-controls></a-entity>
-       
-  
-      
-      
-      
-      
-   <a-entity environment="preset: forest"></a-entity>
- 
-  
-      
-    <a-box color="yellow" position="1 0 -3"
-        
-            sound="src : #sound1;
-               on: triggerdown;
-               volume: 1;
-               refDistance: 1;
-               rollofFactor: 1"  >
-           
-           
-            <a-animation attribute="rotation"
-               dur="3000"
-               fill="forwards"
-               to="0 360 0"
-               direction="alternate"
-               begin="triggerdown"></a-animation>
-           
-         </a-box>
-    
-      
-      
-      
-      
-    
-      
-      
       
       
       
