@@ -22,6 +22,18 @@
              
           <audio id="sound1" src="assets/sound1.mp3"></audio>
           <img id="checkpoint-img" src="assets/meme1.jpg">
+          
+          
+          
+          
+          
+          
+          
+           <a-mixin  
+           id="appear"     
+           event-set__enter="_event: mouseenter; opacity: 1; dur: 1000"
+           event-set__leave="_event: mouseleave; opacity: 1" 
+        ></a-mixin> 
       
       
       </a-assets>
@@ -50,7 +62,7 @@
       
          
       
-      <a-entity movement-controls="speed: 0.15" position="0 0 0">
+      <a-entity id="cam-rig" movement-controls="speed: 0.15" position="0 0 0">
         <a-entity
                   
             camera position="0 1.6 0"
@@ -124,10 +136,10 @@
  
   
       
-    <a-box color="yellow" position="0 0 -3"
+    <a-box color="yellow" position="1 0 -3"
         
             sound="src : #sound1;
-               on: click;
+               on: triggerdown;
                volume: 1;
                refDistance: 1;
                rollofFactor: 1"  >
@@ -138,7 +150,7 @@
                fill="forwards"
                to="0 360 0"
                direction="alternate"
-               begin="click"></a-animation>
+               begin="triggerdown"></a-animation>
            
          </a-box>
     
