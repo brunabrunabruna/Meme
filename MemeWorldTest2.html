@@ -61,6 +61,8 @@
            id="appear"     
            event-set__enter="_event: mouseenter; opacity: 1; dur: 1000"
            event-set__leave="_event: mouseleave; opacity: 1" 
+                 
+                 
         ></a-mixin> 
          
          
@@ -75,9 +77,11 @@
          
         <a-mixin
            id="meme-display"      
-           geometry=" depth: 0.1; height: 1; width: 1"
+           geometry=" depth: 0.03; height: 1; width: 1"
            material="color: white"
            scale="0.8 0.8 0.8"
+           look-at="#cam-rig"    
+                 
             >
                       
         </a-mixin>
@@ -113,7 +117,7 @@
     
     
     
-   <a-entity movement-controls="speed: 0.15" position="0 0 0">
+   <a-entity id="cam-rig" movement-controls="speed: 0.15" position="0 0 0">
         <a-entity
                   
             camera position="0 1.6 0"
@@ -148,7 +152,7 @@
         depth="100"
         color="pink"
         sound="src : #sound1;
-               on
+               on: click;
                volume: 1;
                refDistance: 1;
                rollofFactor: 1"
