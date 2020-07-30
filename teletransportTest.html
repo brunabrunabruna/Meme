@@ -30,7 +30,7 @@
           
           <video id="video2" src="assets/TrumpBarbie.mp4"></video>
           
-          <video id="stonks" src="assets/stonks.mp4"></video>
+          <video id="stonks" src="assets/stonks.mp4" autoplay="true"></video>
           
          <img id="meme1" src="assets/meme1.jpg" >
          <img id="meme2" src="assets/meme2.jpg" >
@@ -114,7 +114,7 @@
         opacity="1"
         width="2"
         height="6"
-        depth="2"
+        depth="0.1"
         material="src: #meme2;
                   shader: flat;
                   repeat: 1 3;
@@ -134,7 +134,7 @@
         opacity="1"
         width="2"
         height="6"
-        depth="2"
+        depth="0.1"
         material="src: #video1;
                   shader: flat;
                   repeat: 1 1;"
@@ -147,7 +147,7 @@
         opacity="1"
         width="2"
         height="3"
-        depth="2"
+        depth="0.1"
         material="src: #meme4;
                   shader: flat;
                   repeat: 1 2;"
@@ -407,6 +407,14 @@
 </a-entity>   
       
 
+      <a-entity geometry="primitive: box"  
+        position="3 3 0"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2" material="src: #stonks"></a-entity>
+      
+      
       <a-box 
         position="3 3 -6"
         opacity="1"
@@ -418,8 +426,6 @@
                   "
              
      
-             
-             
         ></a-box>
       
   
