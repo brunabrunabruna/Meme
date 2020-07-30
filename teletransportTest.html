@@ -28,6 +28,8 @@
           
           <video id="video1" src="assets/MilkLoop.mp4"></video>
           
+          <video id="video2" src="assets/TrumpBarbie.mp4"></video>
+          
          <img id="meme1" src="assets/meme1.jpg" >
          <img id="meme2" src="assets/meme2.jpg" >
          <img id="meme3" src="assets/meme3.jpg" >
@@ -66,7 +68,7 @@
 <!-- CAMERA -->
          
       
-      <a-entity id="cam-rig" movement-controls="speed: 0.15" position="0 0 0">
+      <a-entity id="cam-rig" movement-controls="speed: 0.05" position="0 0 0">
         <a-entity
                   
             camera position="0 1.6 0"
@@ -96,9 +98,10 @@
  <!--LEFT -->    
       
 <a-entity>
-      
-  <!--      <a-box 
-        position="-3 3 -6"
+ 
+    
+    <a-box 
+        position="-3 0 -6"
         opacity="1"
         width="2"
         height="6"
@@ -118,12 +121,12 @@
         ></a-box>
     
        <a-box 
-        position="-3 3 -9"
+        position="-3 0 -9"
         opacity="1"
         width="2"
         height="6"
         depth="2"
-        material="src: #meme5;
+        material="src: #video1;
                   shader: flat;
                   repeat: 1 3;"
              
@@ -131,7 +134,7 @@
         ></a-box> 
     
     <a-box 
-        position="-3 1.5 -13"
+        position="-3 0 -13"
         opacity="1"
         width="2"
         height="3"
@@ -141,7 +144,7 @@
                   repeat: 1 2;"
              
         
-        ></a-box> -->
+        ></a-box>
     
     
 <a-entity>
@@ -190,8 +193,7 @@
         height="2"
         depth="2"
         material="src: #meme4;
-                  shader: flat;
-                  "
+                  shader: flat;"
              
         
         ></a-box>
@@ -279,7 +281,7 @@
         width="2"
         height="2"
         depth="2"
-        material="src: #meme2;
+        material="src: #meme6;
                   shader: flat;
                   
                   "
@@ -299,7 +301,7 @@
         width="2"
         height="2"
         depth="2"
-        material="src: #meme5;
+        material="src: #meme7;
                   shader: flat;
                  "
              
@@ -312,7 +314,7 @@
         width="2"
         height="2"
         depth="2"
-        material="src: #meme4;
+        material="src: #meme8;
                   shader: flat;
                   "
              
@@ -327,7 +329,7 @@
 <!--  duplicate to the side-->
     
     <a-entity position="0 0 9"
-              rotation="90 0 0">
+              rotation="0 0 0">
     
     
     <a-box 
@@ -336,7 +338,7 @@
         width="2"
         height="2"
         depth="2"
-        material="src: #meme2;
+        material="src: #meme9;
                   shader: flat;
                   
                   "
@@ -356,7 +358,7 @@
         width="2"
         height="2"
         depth="2"
-        material="src: #meme5;
+        material="src: #meme10;
                   shader: flat;
                  "
              
@@ -369,7 +371,7 @@
         width="2"
         height="2"
         depth="2"
-        material="src: #meme4;
+        material="src: #meme11;
                   shader: flat;
                   "
              
