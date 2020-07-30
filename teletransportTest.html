@@ -30,8 +30,8 @@
           
           <video id="video2" src="assets/TrumpBarbie.mp4"></video>
           
-          <video id="stonks-mute" src="assets/stonks-mute.mp4" autoplay="true" delay="5000"></video>
-          <audio id="stonks-audio" src="assets/stonks-audio.mp3"></audio>
+          <video id="stonks-mute" src="assets/stonks-mute.mp4" autoplay="true" preload="auto"></video>
+          <audio id="stonks-audio" src="assets/stonks-audio.mp3"  preload="auto"></audio>
           
          <img id="meme1" src="assets/meme1.jpg" >
          <img id="meme2" src="assets/meme2.jpg" >
@@ -71,17 +71,15 @@
       
       
       </a-assets>
-      
-      
+    
       
         
 <!-- CAMERA -->
          
       
-      <a-entity id="cam-rig"  position="0 0 0"
+      <a-entity id="cam-rig"  movement-controls="speed: 0.15" position="0 0 0"
                 
-          movement-controls="controls: checkpoint"
-          checkpoint-controls="mode: animate"
+     
                 
                 >
         <a-entity
@@ -414,7 +412,19 @@
       
 
     
+<a-video src="#stonks-mute" width="4" height="8" position="0 4 -3" autoplay="true" delay="5000"
+          sound="src : #stonks-audio;
+               autoplay: true;
+               volume: 1;
+               refDistance: 6;
+               rollofFactor: 6"
+         
+         >
       
+      <a-sound src="#stonks-audio"
+                autoplay="true"></a-sound>
+      
+      </a-video>
       
       <a-box 
         position="3 4 -6"
@@ -422,15 +432,11 @@
         width="2"
         height="6"
         depth="2"
-        material="src: #stonks-mute;
+        material="src: #meme2;
                   shader: flat;
                   repeat: 1 4"
              
-        sound="src : #stonks-audio;
-               autoplay: true;
-               volume: 1;
-               refDistance: 6;
-               rollofFactor: 6"
+       
              
      
         ></a-box>
