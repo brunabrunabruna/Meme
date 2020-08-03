@@ -30,10 +30,11 @@
           
           <video id="video1" src="assets/MilkLoop.mp4"></video>
           
-          <video id="video2" src="assets/TrumpBarbie.mp4"></video>
+          <video id="trump-mute" src="assets/TrumpBarbie-video.mp4" autoplay="true" preload="auto" loop="true"></video>
+          <audio id="trump-audio" src="assets/TrumpBarbie-audio.mp3"  preload="auto" loop="true"></audio>
           
           <video id="stonks-mute" src="assets/stonks-mute.mp4" autoplay="true" preload="auto" loop="true"></video>
-          <audio id="stonks-audio" src="assets/stonks-audio.mp3"  preload="auto"></audio>
+          <audio id="stonks-audio" src="assets/stonks-audio.mp3"  preload="auto" loop="true"></audio>
           
          <img id="meme1" src="assets/meme1.jpg" >
          <img id="meme2" src="assets/meme2.jpg" >
@@ -79,7 +80,7 @@
 <!-- CAMERA -->
          
       
-      <a-entity id="cam-rig"  movement-controls="speed: 0.05" position="0 0 0">
+      <a-entity id="cam-rig"  movement-controls="speed: 0.9" position="0 0 0">
           
         <a-entity
                   
@@ -212,12 +213,16 @@
                     ></a-entity>
     
   
-      
-<!-- VIDEO 1 SURREAL -->
+ 
     
-<a-video src="#stonks-mute" width="10" height="5" position="0 3 -14" rotation="0 0 0" autoplay="true"
+    
+<!-- VIDEO 1 SURREAL 
+    
+<a-video src="#stonks-mute" width="10" height="5" position="0 3 -14" rotation="0 0 0" autoplay="true" loop="true"
+         
           sound="src : #stonks-audio;
                autoplay: true;
+               loop: true;
                volume: 1;
                refDistance: 1;
                rollofFactor: 1"
@@ -225,7 +230,7 @@
          >
 
       
-      </a-video>
+      </a-video> -->
 
       
 <!-- PILLARS SIDES -->
@@ -628,8 +633,8 @@
       
 <!-- VIDEO 1 SURREAL -->
     
-<a-video src="#stonks-mute" width="10" height="5" position="0 3 -14" rotation="0 0 0" autoplay="true"
-          sound="src : #stonks-audio;
+<a-video src="#trump-mute" width="10" height="5" position="0 3 -14" rotation="0 0 0" autoplay="true"
+          sound="src : #trump-audio;
                autoplay: true;
                volume: 1;
                refDistance: 1;
