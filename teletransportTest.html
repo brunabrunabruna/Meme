@@ -24,7 +24,6 @@
              
           <audio id="sound1" src="assets/sound1.mp3"></audio>
           
-          <audio id="sound1" src="assets/sound1.mp3"></audio>
           
           <img id="checkpoint-img" src="assets/meme1.jpg">
           
@@ -34,7 +33,10 @@
           <audio id="trump-audio" src="assets/TrumpBarbie-audio.mp3"  preload="auto" loop="true"></audio>
           
           <video id="stonks-mute" src="assets/stonks-mute.mp4" autoplay="true" preload="auto" loop="true"></video>
-          <audio id="stonks-audio" src="assets/stonks-audio.mp3"  preload="auto" loop="true"></audio>
+          <audio id="stonks-audio" src="assets/stonks-audio.mp3"  preload="auto" loop="true" poolSize="3"></audio>    
+          
+          <video id="cones-mute" src="assets/cones-mute.mp4"></video>
+          <audio id="cones-audio" src="assets/cones-audio.mp3"  ></audio>
           
          <img id="meme1" src="assets/meme1.jpg" >
          <img id="meme2" src="assets/meme2.jpg" >
@@ -216,21 +218,38 @@
  
     
     
-<!-- VIDEO 1 SURREAL 
+<!-- VIDEO 1 SURREAL
     
 <a-video src="#stonks-mute" width="10" height="5" position="0 3 -14" rotation="0 0 0" autoplay="true" loop="true"
          
-          sound="src : #stonks-audio;
-               autoplay: true;
-               loop: true;
+         sound="src: #stonks-audio; autoplay: true; loop: true;
                volume: 1;
                refDistance: 1;
                rollofFactor: 1"
          
+       
+         
          >
-
+           
       
-      </a-video> -->
+      </a-video>  -->
+    
+    
+    
+    <a-video src="#stonks-mute" width="10" height="5" position="0 3 -14" rotation="0 0 0" autoplay="true" loop="true"
+    
+         
+       
+         
+         >
+      
+      </a-video> 
+    
+     <a-entity position="0 3 -14"  sound="src: #stonks-audio; autoplay: true; loop: true;
+               volume: 1;
+               refDistance: 1;
+               rollofFactor: 1;
+                poolSize: 3"></a-entity>
 
       
 <!-- PILLARS SIDES -->
@@ -552,11 +571,21 @@
     
 </a-entity> 
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+ <!-- MODULE 2 -->       
     
 <a-entity position="10 0 -12"
           rotation="0 -90 0">  
     
-<!-- MODULE 1 -->     
+   
     
 <!-- TEXT ABOVE VIDEO-->
       
@@ -631,20 +660,22 @@
     
   
       
-<!-- VIDEO 1 SURREAL -->
+<!-- VIDEO 2 TEST -->
     
-<a-video src="#trump-mute" width="10" height="5" position="0 3 -14" rotation="0 0 0" autoplay="true"
-          sound="src : #trump-audio;
-               autoplay: true;
-               volume: 1;
-               refDistance: 1;
-               rollofFactor: 1"
+  <a-video src="#cones-mute" width="10" height="5" position="0 3 -14" rotation="0 0 0" autoplay="true" loop="true"
+    
+         
+       
          
          >
-
       
-      </a-video>
-
+      </a-video> 
+    
+     <a-entity position="0 3 -14"  sound="src: #sound1; autoplay: true; loop: true;
+               volume: 1;
+               refDistance: 1;
+               rollofFactor: 1;"
+               ></a-entity>
       
 <!-- PILLARS SIDES -->
       
