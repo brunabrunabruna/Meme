@@ -245,11 +245,7 @@
       
       </a-video> 
     
-     <a-entity position="0 3 -14"  sound="src: #stonks-audio; autoplay: true; loop: true;
-               volume: 1;
-               refDistance: 1;
-               rollofFactor: 1;
-                poolSize: 3"></a-entity>
+    
 
       
 <!-- PILLARS SIDES -->
@@ -671,11 +667,46 @@
       
       </a-video> 
     
-     <a-entity position="0 3 -14"  sound="src: #sound1; autoplay: true; loop: true;
+     <a-entity position="0 3 -14"  sound="src: #cones-audio; autoplay: true; loop: true;
                volume: 1;
                refDistance: 1;
                rollofFactor: 1;"
                ></a-entity>
+    
+    
+    
+    
+          <a-box mixin="look-at"
+        position="0 3 -13"
+        rotation="0 90 0"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="0.1"
+        material="src: #meme2;
+                  shader: flat;
+                  repeat: 1 1;
+                  "
+             
+        sound="src : #sound1;
+               on: click;
+               volume: 1;
+               refDistance: 1;
+               rollofFactor: 1"
+             
+        
+        ></a-box>
+    
+    <a-sound 
+    material="opacity:1" 
+    geometry="primitive:box"
+    position="1 1 1"
+    scale="1 1 1"
+    src="#sound1" 
+    on="click">
+</a-sound>
+
+    
       
 <!-- PILLARS SIDES -->
       
