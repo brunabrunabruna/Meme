@@ -240,9 +240,9 @@
   
 
     
-  
+<!-- THIS ENTITY WRAPS UP THE WHOLE 4 MODULES -->  
     
-    
+<a-entity position="0 0 -4">
 
 <!-- MODULE 1 -->     
 
@@ -259,8 +259,8 @@
                      wrapCount: 10"
               geometry="primitive: plane; width: auto; height: auto; "
               material="color: #ffffff; shader: flat; visible: false"
-              event-set__enter="_event: mouseenter; text.color: blue"
-              event-set__leave="_event: mouseleave; text.color: pink"
+              event-set__enter="_event: mouseenter; scale: 6 6 6"
+              event-set__leave="_event: mouseleave; scale: 5 5 5"
               animation="property: position;
                          to: 0 5 -12;
                          dir: alternate;
@@ -268,6 +268,23 @@
                          easing: linear;
                          loop: true;"
               
+            
+                    ></a-entity>
+        
+    
+    
+<!-- INTRODUCTION TEST-->
+      
+    <a-entity
+              position="0 2 1.1"
+              scale="5 5 5"
+              text=" value: Surreal;
+                     color: pink;
+                     align: center;
+                     wrapCount: 100"
+              geometry="primitive: plane; width: 2; height: 2; "
+              material="color: #000000; shader: flat; visible: true"
+             
             
                     ></a-entity>
     
@@ -2141,6 +2158,8 @@
     
 </a-entity> 
       
+    
+</a-entity>    
             
       
       
