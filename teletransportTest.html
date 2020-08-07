@@ -25,16 +25,17 @@
     
         
           
-          <video id="stonks-video" src="assets/stonks-video.mp4" preload="auto"></video>
+          <video id="stonks-video" src="assets/stonks-video.mp4" preload="auto" autoplay="true"></video>
           <audio id="stonks-audio" src="assets/stonks-audio.mp3"></audio>     
           
-          <video id="depressed-video" src="assets/stonks-video.mp4" preload="auto"></video>
+          <video id="depressed-video" src="assets/stonks-video.mp4" preload="auto" autoplay="true"></video>
           <audio id="depressed-audio" src="assets/stonks-audio.mp3"></audio>    
            
-          <video id="wholesome-video" src="assets/wholesome/wholesome-video.mp4" preload="auto"></video>
+          <video id="wholesome-video" src="assets/wholesome/wholesome-video.mp4" preload="auto" autoplay="true"></video>
           <audio id="wholesome-audio" src="assets/wholesome/wholesome-audio.mp3"></audio>   
           
-          <video id="old-video" src="assets/old/old-video.mp4" preload="auto"></video>
+          
+          <video id="old-video" src="assets/old/old-video.mp4" preload="auto" autoplay="true"></video>
           <audio id="old-audio" src="assets/old/old-audio.mp3"></audio>    
           
          
@@ -1938,55 +1939,54 @@
     
   
       
-<!-- VIDEO 4 TEST -->
-    
-  <a-video src="#old-video" width="10" height="5" position="0 3 -14" rotation="0 0 0" autoplay="true" loop="true"
-    
-         
-       
-         
-         >
-      
-      </a-video> 
+<!-- VIDEO 4 TEST  
+
+
+
+
+
+
     
      <a-entity position="0 3 -14"  sound="src: #old-audio; autoplay: true; loop: true;
                volume: 1;
                refDistance: 1;
                rollofFactor: 1;"
-               ></a-entity>
+               ></a-entity> 
+    
+ 
+  
+    <a-entity geometry="primitive: plane" material="src: #old-video; shader: flat"
+          position="0 3 -13" sound="src: #old-sound; autoplay: true positional: true loop: true;
+               volume: 10;
+               refDistance: 0.2;
+               rollofFactor: 0.2;"></a-entity> -->
     
     
-    <!--
+  
+   <a-video src="#old-video" width="10" height="5" position="0 3 -14" rotation="0 0 0" autoplay="true" loop="true"
+            
+            
+            
+         
+         >
+      
+      </a-video> 
     
-          <a-box mixin="look-at"
-        position="0 3 -13"
-        rotation="0 90 0"
-        opacity="1"
-        width="2"
-        height="2"
-        depth="0.1"
-        material="src: #meme2;
-                  shader: flat;
-                  repeat: 1 1;
-                  "
-             
-        sound="src : #sound1;
-               on: click;
+    <a-entity
+              position="0 3 -14"
+               sound="src: #old-sound; autoplay: true; loop: true;
                volume: 1;
-               refDistance: 1;
-               rollofFactor: 1"
-             
-        
-        ></a-box>
+               refDistance: 0.2;
+               rollofFactor: 0.2;"
     
-    <a-sound 
-    material="opacity:1" 
-    geometry="primitive:box"
-    position="1 1 1"
-    scale="1 1 1"
-    src="#sound1" 
-    on="click">
-</a-sound>  -->
+              
+              ></a-entity>
+
+    
+     
+
+
+  
 
     
       
