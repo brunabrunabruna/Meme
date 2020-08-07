@@ -26,17 +26,18 @@
         
           
           <video id="stonks-video" src="assets/stonks-video.mp4" preload="auto" autoplay="true"></video>
-          <audio id="stonks-audio" src="assets/stonks-audio.mp3"></audio>     
+          <audio id="stonks-audio" src="assets/stonks-audio.mp3"  preload="auto"></audio>     
           
-          <video id="depressed-video" src="assets/stonks-video.mp4" preload="auto" autoplay="true"></video>
-          <audio id="depressed-audio" src="assets/stonks-audio.mp3"></audio>    
+          <video id="depressed-video" src="assets/depressed/depressed-video.mp4" preload="auto" autoplay="true"></video>
+          <audio id="depressed-audio" src="assets/depressed/depressed-audio.mp3"  preload="auto"></audio>    
            
           <video id="wholesome-video" src="assets/wholesome/wholesome-video.mp4" preload="auto" autoplay="true"></video>
-          <audio id="wholesome-audio" src="assets/wholesome/wholesome-audio.mp3"></audio>   
+          <audio id="wholesome-audio" src="assets/wholesome/wholesome-audio.mp3"  preload="auto"></audio>   
           
           
           <video id="old-video" src="assets/old/old-video.mp4" preload="auto" autoplay="true"></video>
-          <audio id="old-audio" src="assets/old/old-audio.mp3"></audio>    
+          <audio id="old-audio" src="assets/old/old-audio-1.mp3" preload="auto"  preload="auto"></audio>    
+             
           
          
     
@@ -864,19 +865,19 @@
     
 <!-- TEXT ABOVE VIDEO-->
       
-    <a-entity
-              position="0 6 -12"
-              scale="10 10 10"
-              text=" value: Surreal;
+  <a-entity
+              position="0 5.2 -12"
+              scale="5 5 5"
+              text=" value: Depression;
                      color: pink;
                      align: center;
                      wrapCount: 10"
               geometry="primitive: plane; width: auto; height: auto; "
               material="color: #ffffff; shader: flat; visible: false"
-              event-set__enter="_event: mouseenter; text.color: blue"
-              event-set__leave="_event: mouseleave; text.color: pink"
+              event-set__enter="_event: mouseenter; scale: 6 6 6"
+              event-set__leave="_event: mouseleave; scale: 5 5 5"
               animation="property: position;
-                         to: 0 7 -12;
+                         to: 0 5 -12;
                          dir: alternate;
                          dur: 3000;
                          easing: linear;
@@ -888,26 +889,27 @@
    
 <!-- ARROW NEXT-->  
       
+      
        <a-entity
-              position="1 2 -11"
-              scale="5 5 5"
-              text=" value: >>>;
+              position="4 2 -13.5"
+              scale="2 2 2"
+              text=" value: >;
                      color: pink;
                      align: center;
-                     wrapCount: 10"
+                     wrapCount: 2"
               geometry="primitive: plane; width: auto; height: auto; "
               material="color: #ffffff; shader: flat; visible: false"
-              event-set__enter="_event: mouseenter; text.color: blue"
-              event-set__leave="_event: mouseleave; text.color: pink"
+             
               animation="property: position;
-                         to: 2 2 -11;
+                         to: 5 2 -13.5;
                          dir: alternate;
                          dur: 3000;
                          easing: linear;
                          loop: true;"
               
             
-                    ></a-entity>
+                    ></a-entity> 
+   
      
    <!-- ARROW FLOOR-->    
       
@@ -944,7 +946,7 @@
     
     
     
-       <a-video src="#stonks-video" width="10" height="5" position="0 3 -14" rotation="0 0 0" autoplay="true" loop="true"
+       <a-video src="#depressed-video" width="10" height="5" position="0 3 -14" rotation="0 0 0" autoplay="true" loop="true"
     
          
        
@@ -953,7 +955,7 @@
       
       </a-video> 
     
- <a-entity position="0 3 -14"  sound="src: #wholesome-audio; autoplay: true; loop: true;
+ <a-entity position="0 3 -14"  sound="src: #depressed-audio; autoplay: true; loop: true;
                volume: 1;
                refDistance: 1;
                rollofFactor: 1;">
@@ -1367,19 +1369,19 @@
     
 <!-- TEXT ABOVE VIDEO-->
       
-    <a-entity
-              position="0 6 -12"
-              scale="10 10 10"
+   <a-entity
+              position="0 5.2 -12"
+              scale="5 5 5"
               text=" value: Surreal;
                      color: pink;
                      align: center;
                      wrapCount: 10"
               geometry="primitive: plane; width: auto; height: auto; "
               material="color: #ffffff; shader: flat; visible: false"
-              event-set__enter="_event: mouseenter; text.color: blue"
-              event-set__leave="_event: mouseleave; text.color: pink"
+              event-set__enter="_event: mouseenter; scale: 6 6 6"
+              event-set__leave="_event: mouseleave; scale: 5 5 5"
               animation="property: position;
-                         to: 0 7 -12;
+                         to: 0 5 -12;
                          dir: alternate;
                          dur: 3000;
                          easing: linear;
@@ -1391,26 +1393,27 @@
    
 <!-- ARROW NEXT-->  
       
+     
        <a-entity
-              position="1 2 -11"
-              scale="5 5 5"
-              text=" value: >>>;
+              position="4 2 -13.5"
+              scale="2 2 2"
+              text=" value: >;
                      color: pink;
                      align: center;
-                     wrapCount: 10"
+                     wrapCount: 2"
               geometry="primitive: plane; width: auto; height: auto; "
               material="color: #ffffff; shader: flat; visible: false"
-              event-set__enter="_event: mouseenter; text.color: blue"
-              event-set__leave="_event: mouseleave; text.color: pink"
+             
               animation="property: position;
-                         to: 2 2 -11;
+                         to: 5 2 -13.5;
                          dir: alternate;
                          dur: 3000;
                          easing: linear;
                          loop: true;"
               
             
-                    ></a-entity>
+                    ></a-entity> 
+   
      
    <!-- ARROW FLOOR-->    
       
@@ -1867,20 +1870,19 @@
    
     
 <!-- TEXT ABOVE VIDEO-->
-      
-    <a-entity
-              position="0 6 -12"
-              scale="10 10 10"
+   <a-entity
+              position="0 5.2 -12"
+              scale="5 5 5"
               text=" value: Surreal;
                      color: pink;
                      align: center;
                      wrapCount: 10"
               geometry="primitive: plane; width: auto; height: auto; "
               material="color: #ffffff; shader: flat; visible: false"
-              event-set__enter="_event: mouseenter; text.color: blue"
-              event-set__leave="_event: mouseleave; text.color: pink"
+              event-set__enter="_event: mouseenter; scale: 6 6 6"
+              event-set__leave="_event: mouseleave; scale: 5 5 5"
               animation="property: position;
-                         to: 0 7 -12;
+                         to: 0 5 -12;
                          dir: alternate;
                          dur: 3000;
                          easing: linear;
@@ -1892,26 +1894,27 @@
    
 <!-- ARROW NEXT-->  
       
+   
        <a-entity
-              position="1 2 -11"
-              scale="5 5 5"
-              text=" value: >>>;
+              position="4 2 -13.5"
+              scale="2 2 2"
+              text=" value: >;
                      color: pink;
                      align: center;
-                     wrapCount: 10"
+                     wrapCount: 2"
               geometry="primitive: plane; width: auto; height: auto; "
               material="color: #ffffff; shader: flat; visible: false"
-              event-set__enter="_event: mouseenter; text.color: blue"
-              event-set__leave="_event: mouseleave; text.color: pink"
+             
               animation="property: position;
-                         to: 2 2 -11;
+                         to: 5 2 -13.5;
                          dir: alternate;
                          dur: 3000;
                          easing: linear;
                          loop: true;"
               
             
-                    ></a-entity>
+                    ></a-entity> 
+   
      
    <!-- ARROW FLOOR-->    
       
