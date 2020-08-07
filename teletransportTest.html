@@ -26,7 +26,16 @@
         
           
           <video id="stonks-video" src="assets/stonks-video.mp4" preload="auto"></video>
-          <audio id="stonks-audio" src="assets/stonks-audio.mp3"></audio>    
+          <audio id="stonks-audio" src="assets/stonks-audio.mp3"></audio>     
+          
+          <video id="depressed-video" src="assets/stonks-video.mp4" preload="auto"></video>
+          <audio id="depressed-audio" src="assets/stonks-audio.mp3"></audio>    
+           
+          <video id="wholesome-video" src="assets/wholesome/wholesome-video.mp4" preload="auto"></video>
+          <audio id="wholesome-audio" src="assets/wholesome/wholesome-audio.mp3"></audio>   
+          
+          <video id="old-video" src="assets/stonks-video.mp4" preload="auto"></video>
+          <audio id="old-audio" src="assets/stonks-audio.mp3"></audio>    
           
          
     
@@ -927,20 +936,22 @@
       
 <!-- VIDEO 2 TEST -->
     
-  <a-video src="#cones-mute" width="10" height="5" position="0 3 -14" rotation="0 0 0" autoplay="true" loop="true"
+    
+    
+       <a-video src="#stonks-video" width="10" height="5" position="0 3 -14" rotation="0 0 0" autoplay="true" loop="true"
     
          
+       
          
          >
       
       </a-video> 
     
-     <a-entity position="0 3 -14"  sound="src: #cones-audio; autoplay: true; loop: true;
+ <a-entity position="0 3 -14"  sound="src: #stonks-audio; autoplay: true; loop: true;
                volume: 1;
-               refDistance: 0.2;
-               rollofFactor: 0.2;"
-               ></a-entity>
-    
+               refDistance: 1;
+               rollofFactor: 1;">
+ </a-entity> 
     
     
     
@@ -1423,7 +1434,7 @@
       
 <!-- VIDEO 2 TEST -->
     
-  <a-video src="#cones-mute" width="10" height="5" position="0 3 -14" rotation="0 0 0" autoplay="true" loop="true"
+  <a-video src="#wholesome-video" width="10" height="5" position="0 3 -14" rotation="0 0 0" autoplay="true" loop="true"
     
          
        
@@ -1432,7 +1443,7 @@
       
       </a-video> 
     
-     <a-entity position="0 3 -14"  sound="src: #cones-audio; autoplay: true; loop: true;
+     <a-entity position="0 3 -14"  sound="src: #wholesome-audio; autoplay: true; loop: true;
                volume: 1;
                refDistance: 1;
                rollofFactor: 1;"
