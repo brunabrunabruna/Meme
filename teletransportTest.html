@@ -25,25 +25,19 @@
     
         
           
-          <video id="stonks-video" src="assets/stonks-video.mp4" preload="auto" autoplay="true"></video>
+          <video id="stonks-video" src="assets/stonks-video.mp4" preload="auto" autoplay="true" loop="true"></video>
           <audio id="stonks-audio" src="assets/stonks-audio.mp3"  preload="auto"></audio>     
           
-          <video id="depressed-video" src="assets/depressed/depressed-video.mp4" preload="auto" autoplay="true"></video>
+          <video id="depressed-video" src="assets/depressed/depressed-video.mp4" preload="auto" autoplay="true" loop="true"></video>
           <audio id="depressed-audio" src="assets/depressed/depressed-audio.mp3"  preload="auto"></audio>    
            
-          <video id="wholesome-video" src="assets/wholesome/wholesome-video.mp4" preload="auto" autoplay="true"></video>
+          <video id="wholesome-video" src="assets/wholesome/wholesome-video.mp4" preload="auto" autoplay="true" loop="true"></video>
           <audio id="wholesome-audio" src="assets/wholesome/wholesome-audio.mp3"  preload="auto"></audio>   
           
           
-          <video id="old-video" src="assets/old/old-video.mp4" preload="auto" autoplay="true"></video>
+          <video id="old-video" src="assets/old/old-video.mp4" preload="auto" autoplay="true" loop="true"></video>
           <audio id="old-audio" src="assets/old/old-audio-1.mp3" preload="auto"  preload="auto"></audio>    
              
-          
-         
-    
-          
-         <img id="arrow" src="assets/arrow.png" >
-          
           
           
          <img id="meme1" src="assets/meme1.jpg" >
@@ -167,9 +161,17 @@
           
           
            <a-mixin  
-           id="appear"     
-           event-set__enter="_event: mouseenter; opacity: 1; dur: 1000"
-           event-set__leave="_event: mouseleave; opacity: 1" 
+           id="scale-up"     
+           event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2; dur: 5000"
+           event-set__leave="_event: mouseleave; scale: 1 1 1; dur: 5000" 
+        ></a-mixin> 
+          
+              
+          
+           <a-mixin  
+           id="scale-up-smol"     
+           event-set__enter="_event: mouseenter; scale: 1.1 1.1 1.1; dur: 5000"
+           event-set__leave="_event: mouseleave; scale: 1 1 1; dur: 5000" 
         ></a-mixin> 
           
           
@@ -497,7 +499,7 @@
       
       <!-- RIGHT  -->
       
-      <a-box 
+      <a-box mixin="scale-up-smol"
         position="5 3 -9"
         opacity="1"
         width="2"
@@ -508,8 +510,8 @@
                   repeat: 1 3"
        ></a-box>
       
-      <a-box 
-        position="5 1.5 -6"
+      <a-box mixin="scale-up-smol"
+        position="5 1.5 -6" 
         opacity="1"
         width="2"
         height="6"
@@ -519,7 +521,7 @@
                   repeat: 1 3"
        ></a-box>
       
-      <a-box 
+      <a-box mixin="scale-up-smol"
         position="5 1.5 -3"
         opacity="1"
         width="2"
@@ -637,7 +639,7 @@
       
 <a-entity > 
     
-  <a-box look-at="#cam-rig"
+  <a-box look-at="#cam-rig" mixin="scale-up"
         position="-3 7 0"
         opacity="1"
         width="2"
@@ -648,7 +650,7 @@
                   repeat: 1 1"
        ></a-box>
   
-       <a-box look-at="#cam-rig"
+       <a-box look-at="#cam-rig" mixin="scale-up"
         position="0 7 0"
         opacity="1"
         width="2"
@@ -659,7 +661,7 @@
                   repeat: 1 1"
        ></a-box>
   
-      <a-box look-at="#cam-rig"
+      <a-box look-at="#cam-rig" mixin="scale-up"
         position="3 7 0"
         opacity="1"
         width="2"
@@ -671,7 +673,7 @@
        ></a-box>
    
     
-      <a-box look-at="#cam-rig"
+      <a-box look-at="#cam-rig" mixin="scale-up"
         position="-3 7 -3"
         opacity="1"
         width="2"
@@ -682,7 +684,7 @@
                   repeat: 1 1"
        ></a-box>
   
-       <a-box look-at="#cam-rig"
+       <a-box look-at="#cam-rig" mixin="scale-up"
         position="0 7 -3"
         opacity="1"
         width="2"
@@ -693,7 +695,7 @@
                   repeat: 1 1"
        ></a-box>
   
-      <a-box look-at="#cam-rig"
+      <a-box look-at="#cam-rig" mixin="scale-up"
         position="3 7 -3"
         opacity="1"
         width="2"
@@ -704,7 +706,7 @@
                   repeat: 1 1"
        ></a-box>
   
-      <a-box look-at="#cam-rig"
+      <a-box look-at="#cam-rig" mixin="scale-up"
         position="-3 7 -6"
         opacity="1"
         width="2"
@@ -715,7 +717,7 @@
                   repeat: 1 1"
        ></a-box>
   
-       <a-box look-at="#cam-rig"
+       <a-box look-at="#cam-rig" mixin="scale-up"
         position="0 7 -6"
         opacity="1"
         width="2"
@@ -726,7 +728,7 @@
                   repeat: 1 1"
        ></a-box>
   
-      <a-box look-at="#cam-rig"
+      <a-box look-at="#cam-rig" mixin="scale-up"
         position="3 7 -6"
         opacity="1"
         width="2"
@@ -737,7 +739,7 @@
                   repeat: 1 1"
        ></a-box>
   
-      <a-box look-at="#cam-rig"
+      <a-box look-at="#cam-rig" mixin="scale-up"
         position="-3 7 -9"
         opacity="1"
         width="2"
@@ -748,7 +750,7 @@
                   repeat: 1 1"
        ></a-box>
   
-       <a-box look-at="#cam-rig"
+       <a-box look-at="#cam-rig" mixin="scale-up"
         position="0 7 -9"
         opacity="1"
         width="2"
@@ -759,7 +761,7 @@
                   repeat: 1 1"
        ></a-box>
   
-      <a-box look-at="#cam-rig"
+      <a-box look-at="#cam-rig" mixin="scale-up"
         position="3 7 -9"
         opacity="1"
         width="2"
@@ -771,7 +773,7 @@
        ></a-box>
   
       
-        <a-box look-at="#cam-rig"
+        <a-box look-at="#cam-rig" mixin="scale-up"
         position="-3 7 -12"
         opacity="1"
         width="2"
@@ -782,7 +784,7 @@
                   repeat: 1 1"
        ></a-box>
   
-       <a-box look-at="#cam-rig"
+       <a-box look-at="#cam-rig" mixin="scale-up"
         position="0 7 -12"
         opacity="1"
         width="2"
@@ -793,13 +795,13 @@
                   repeat: 1 1"
        ></a-box>
   
-      <a-box look-at="#cam-rig"
+      <a-box look-at="#cam-rig" mixin="scale-up"
         position="3 7 -12"
         opacity="1"
         width="2"
         height="2"
         depth="2"
-        material="src: #meme17;
+        material="src: #meme17; 
                   shader: flat;
                   repeat: 1 1"
        ></a-box>
@@ -923,8 +925,7 @@
                      wrapCount: 10"
               geometry="primitive: plane; width: auto; height: auto; rotation: -90 0 90 "
               material="color: #ffffff; shader: flat; visible: false"
-              event-set__enter="_event: mouseenter; text.color: blue"
-              event-set__leave="_event: mouseleave; text.color: pink"
+              
               animation="property: position;
                          to: 0 0.1 -2;
                          dir: alternate;
@@ -946,7 +947,9 @@
     
     
     
-       <a-video src="#depressed-video" width="10" height="5" position="0 3 -14" rotation="0 0 0" autoplay="true" loop="true"
+       <a-video src="#depressed-video" width="10" height="5" position="0 3 -14" rotation="0 0 0" loop="true" on="click";
+                
+                
     
          
        
@@ -955,12 +958,41 @@
       
       </a-video> 
     
- <a-entity position="0 3 -14"  sound="src: #depressed-audio; autoplay: true; loop: true;
-               volume: 1;
+ <a-entity position="0 3 -14"    geometry="primitive:box" sound="src: #depressed-audio; on: click; loop: true;
+               volume: 0;
                refDistance: 1;
-               rollofFactor: 1;">
+               rollofFactor: 1;"
+           
+            event-set__enter="_event: mouseenter; volume:1"
+              event-set__leave="_event: mouseleave; volume:1 "
+              
+           
+           
+           >
  </a-entity> 
     
+    
+    <a-box 
+        position="1 3 -13"
+        rotation="0 90 0"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="0.1"
+        material="src: #meme2;
+                  shader: flat;
+                  repeat: 1 1;
+                  "
+             
+        sound="src : #depressed-audio;
+               autoplay: true;
+               loop: true
+               volume: 1;
+               refDistance: 1;
+               rollofFactor: 1"
+             
+        
+        ></a-box>
     
     
   <!--        <a-box mixin="look-at"
@@ -1372,7 +1404,7 @@
    <a-entity
               position="0 5.2 -12"
               scale="5 5 5"
-              text=" value: Surreal;
+              text=" value: Wholesome;
                      color: pink;
                      align: center;
                      wrapCount: 10"
@@ -1873,7 +1905,7 @@
    <a-entity
               position="0 5.2 -12"
               scale="5 5 5"
-              text=" value: Surreal;
+              text=" value: Old;
                      color: pink;
                      align: center;
                      wrapCount: 10"
@@ -1922,7 +1954,7 @@
               position="0 0.1 -1"
               rotatio="-90 0 90"
               scale="5 5 5"
-              text=" value: >>>;
+              text=" value: ^;
                      color: pink;
                      align: center;
                      wrapCount: 10"
