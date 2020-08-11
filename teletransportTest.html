@@ -26,17 +26,17 @@
         
           
           <video id="stonks-video" src="assets/stonks-video.mp4" preload="auto" autoplay="true" loop="true"></video>
-          <audio id="stonks-audio" src="assets/stonks-audio.mp3"  preload="auto"></audio>     
+          <audio id="stonks-audio" src="assets/stonks-audio.mp3"  preload="auto"  loop="true"></audio>     
           
           <video id="depressed-video" src="assets/depressed/depressed-video.mp4" preload="auto" autoplay="true" loop="true"></video>
-          <audio id="depressed-audio" src="assets/depressed/depressed-audio.mp3"  preload="auto"></audio>    
+          <audio id="depressed-audio" src="assets/depressed/depressed-audio.mp3"  preload="auto"  loop="true"></audio>    
            
           <video id="wholesome-video" src="assets/wholesome/wholesome-video.mp4" preload="auto" autoplay="true" loop="true"></video>
-          <audio id="wholesome-audio" src="assets/wholesome/wholesome-audio.mp3"  preload="auto"></audio>   
+          <audio id="wholesome-audio" src="assets/wholesome/wholesome-audio.mp3"  preload="auto" loop="true"></audio>   
           
           
           <video id="old-video" src="assets/old/old-video.mp4" preload="auto" autoplay="true" loop="true"></video>
-          <audio id="old-audio" src="assets/old/old-audio-1.mp3" preload="auto"  preload="auto"></audio>    
+          <audio id="old-audio" src="assets/old/old-audio-1.mp3" preload="auto" autoplay="true" loop="true"></audio>    
              
           
           
@@ -274,7 +274,7 @@
 <!-- INTRODUCTION 1-->
       
     <a-entity
-              position="0 2 1.1"
+              position="-0.4 2 1.1"
               scale="5 5 5"
               text=" value: Surreal Memes are a representation of
                     the nihilist world view and abstract thoughts
@@ -290,7 +290,7 @@
                     ></a-entity>   
     
     <a-entity
-              position="0 1.3 1.1"
+              position="-0.4 1.3 1.1"
               scale="3 3 3"
               text=" value: please walk through this poster 
                     to enter the meme maze;
@@ -969,7 +969,7 @@
       
       </a-video> 
     
- <a-entity position="0 3 -14"    geometry="primitive:box" sound="src: #depressed-audio; autoplay: true; loop: true;
+ <a-entity position="0 3 -14"  sound="src: #depressed-audio; autoplay: true; loop: true;
                volume: 1;
                refDistance: 1;
                rollofFactor: 1;"
@@ -979,30 +979,7 @@
  </a-entity> 
     
   
-    
- <a-box 
-        position="0 3 -5"
-        rotation="0 90 0"
-        opacity="1"
-        width="2"
-        height="2"
-        depth="2"
-        material="color:pink;
-                  shader: flat;
-                  repeat: 1 1;
-                  "
-             
-        sound="src : #depressed-audio;
-            autoplay: true; loop: true;
-               volume: 1;
-               refDistance: 1;
-               rollofFactor: 1"
-             
-        
-        ></a-box>
-
  
-    
       
 <!-- PILLARS SIDES -->
       
@@ -1453,16 +1430,20 @@
     
   <a-video src="#wholesome-video" width="10" height="5" position="0 3 -14" rotation="0 0 0" autoplay="true" loop="true"
     
-         
+
        
          
          >
       
+      
+      <a-sound ></a-sound>
+      
       </a-video> 
     
-     <a-entity position="0 3 -14"  sound="src: #wholesome-audio; autoplay: true; loop: true;
+     <a-entity position="0 3 -14"  sound="src: #wholesome-audio; on: click; loop: true;
+                                          
                volume: 1;
-               refDistance: 1;
+               refDistance: 1;           
                rollofFactor: 1;"
                ></a-entity>
     
@@ -1509,7 +1490,7 @@
         opacity="1"
         width="2"
         height="6"
-        depth="2"
+        depth="3.2"
         material="src: #wholesome1;
                   shader: flat;
                   repeat: 1 3"
@@ -1531,7 +1512,7 @@
         opacity="1"
         width="2"
         height="6"
-        depth="2"
+        depth="3.5"
         material="src: #wholesome17;
                   shader: flat;
                   repeat: 1 3"
@@ -1556,7 +1537,7 @@
         opacity="1"
         width="2"
         height="6"
-        depth="2"
+        depth="3"
         material="src: #wholesome16;
                   shader: flat;
                   repeat: 1 3"
@@ -1578,7 +1559,7 @@
         opacity="1"
         width="2"
         height="6"
-        depth="2"
+        depth="3"
         material="src: #wholesome14;
                   shader: flat;
                   repeat: 1 3"
