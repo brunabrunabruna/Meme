@@ -303,6 +303,34 @@
             
                     ></a-entity>
     
+    
+    
+    
+       
+<!-- END TEXT -->
+    
+    
+    
+       
+    <a-entity
+              position="0 2 4.1"
+              scale="1 1 1"
+              text=" value: This is the end of the meme maze
+                    
+                    Please walk through this poster 
+                    to start again
+                  ;
+                     color: pink;
+                     align: center;
+                     wrapCount: 70"
+              geometry="primitive: plane; width: 5; height: 10; "
+              material="color: #000000; shader: flat; visible: true"
+             
+            
+                    ></a-entity>   
+    
+      
+    
    
 <!-- ARROW NEXT 
 
@@ -326,7 +354,6 @@
                          dur: 3000;
                          easing: linear;
                          loop: true;"
-              
             
                     ></a-entity> 
    
@@ -525,7 +552,7 @@
         opacity="1"
         width="2"
         height="6"
-        depth="2"
+        depth="3.5"
         material="src: #meme12;
                   shader: flat;
                   repeat: 1 3"
@@ -558,7 +585,7 @@
         opacity="1"
         width="2"
         height="6"
-        depth="2"
+        depth="4"
         material="src: #meme17;
                   shader: flat;
                   repeat: 1 3"
@@ -595,11 +622,11 @@
        ></a-box>
       
   <a-box 
-        position="3 3 3"
+        position="3 3 2"
         opacity="1"
         width="2"
         height="6"
-        depth="2"
+        depth="3"
         material="src: #meme10;
                   shader: flat;
                   repeat: 1 3"
@@ -705,7 +732,7 @@
        <a-box look-at="#cam-rig" 
         position="0 7 -6"
         opacity="1"
-        width="2"
+        width="4"
         height="2"
         depth="2"
         material="src: #meme10;
@@ -729,7 +756,7 @@
         opacity="1"
         width="2"
         height="2"
-        depth="2"
+        depth="3.5"
         material="src: #meme12;
                   shader: flat;
                   repeat: 1 1"
@@ -822,9 +849,8 @@
               position="0 2 2"
               scale="5 5 5"
               text=" value: Memes help us to express our emotions
-                    better, and its humour can function as a 
-                    coping mechanism to many who battle 
-                    with depression
+                    better. For many, it is also a coping mechanism 
+                    against sadness or depression
                   ;
                      color: pink;
                      align: center;
@@ -839,7 +865,7 @@
               position="0 1.3 2.1"
               scale="3 3 3"
               text=" value: please walk through this poster 
-                    to enter the meme maze;
+                    to continue the tour;
                      color: pink;
                      align: center;
                      wrapCount: 100"
@@ -904,7 +930,7 @@
               position="0 0.1 -1"
               rotatio="-90 0 90"
               scale="5 5 5"
-              text=" value: >>>;
+              text=" value: ^;
                      color: pink;
                      align: center;
                      wrapCount: 10"
@@ -943,72 +969,38 @@
       
       </a-video> 
     
- <a-entity position="0 3 -14"    geometry="primitive:box" sound="src: #depressed-audio; on: click; loop: true;
-               volume: 0;
+ <a-entity position="0 3 -14"    geometry="primitive:box" sound="src: #depressed-audio; autoplay: true; loop: true;
+               volume: 1;
                refDistance: 1;
                rollofFactor: 1;"
-           
-            event-set__enter="_event: mouseenter; volume:1"
-              event-set__leave="_event: mouseleave; volume:1 "
-              
-           
+         
            
            >
  </a-entity> 
     
+  
     
-    <a-box 
-        position="1 3 -13"
+ <a-box 
+        position="0 3 -5"
         rotation="0 90 0"
         opacity="1"
         width="2"
         height="2"
-        depth="0.1"
-        material="src: #meme2;
+        depth="2"
+        material="color:pink;
                   shader: flat;
                   repeat: 1 1;
                   "
              
         sound="src : #depressed-audio;
-               autoplay: true;
-               loop: true
+            autoplay: true; loop: true;
                volume: 1;
                refDistance: 1;
                rollofFactor: 1"
              
         
         ></a-box>
-    
-    
-  <!--        <a-box mixin="look-at"
-        position="0 3 -13"
-        rotation="0 90 0"
-        opacity="1"
-        width="2"
-        height="2"
-        depth="0.1"
-        material="src: #meme2;
-                  shader: flat;
-                  repeat: 1 1;
-                  "
-             
-        sound="src : #sound1;
-               on: click;
-               volume: 1;
-               refDistance: 1;
-               rollofFactor: 1"
-             
-        
-        ></a-box>
-    
-    <a-sound 
-    material="opacity:1" 
-    geometry="primitive:box"
-    position="1 1 1"
-    scale="1 1 1"
-    src="#sound1" 
-    on="click">
-</a-sound>   -->
+
  
     
       
@@ -1367,10 +1359,10 @@
                     ></a-entity>   
     
     <a-entity
-              position="0 2 2.1"
+              position="0 1 2.1"
               scale="3 3 3"
               text=" value: please walk through this poster 
-                    to enter the meme maze;
+                    to continue the tour;
                      color: pink;
                      align: center;
                      wrapCount: 100"
@@ -1438,14 +1430,13 @@
               position="0 0.1 -1"
               rotatio="-90 0 90"
               scale="5 5 5"
-              text=" value: >>>;
+              text=" value: ^;
                      color: pink;
                      align: center;
                      wrapCount: 10"
               geometry="primitive: plane; width: auto; height: auto; rotation: -90 0 90 "
               material="color: #ffffff; shader: flat; visible: false"
-              event-set__enter="_event: mouseenter; text.color: blue"
-              event-set__leave="_event: mouseleave; text.color: pink"
+            
               animation="property: position;
                          to: 0 0.1 -2;
                          dir: alternate;
@@ -1624,12 +1615,12 @@
        ></a-box>
       
   <a-box 
-        position="3 3 3"
+        position="3 3 2"
         opacity="1"
         width="2"
         height="6"
         depth="2"
-        material="src: #wholesome10;
+        material="src: #wholesome19;
                   shader: flat;
                   repeat: 1 3"
        ></a-box>
@@ -1867,10 +1858,10 @@
                     ></a-entity>   
     
     <a-entity
-              position="0 2 2.1"
+              position="0 1 2.1"
               scale="3 3 3"
               text=" value: please walk through this poster 
-                    to timetravel to the first memes;
+                    to continue the tour;
                      color: pink;
                      align: center;
                      wrapCount: 100"
@@ -2031,7 +2022,7 @@
         width="2"
         height="6"
         depth="2"
-        material="src: #old2;
+        material="src: #old5;
                   shader: flat;
                   repeat: 1 3"
        ></a-box>
@@ -2067,7 +2058,7 @@
         width="2"
         height="6"
         depth="2"
-        material="src: #old5;
+        material="src: #old2;
                   shader: flat;
                   repeat: 1 3"
        ></a-box>
@@ -2321,7 +2312,10 @@
                   repeat: 1 1"
        ></a-box>
   
-      
+    
+    
+    
+ 
       
  </a-entity>   
       
