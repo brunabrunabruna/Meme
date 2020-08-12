@@ -24,8 +24,64 @@
     <script>
 		AFRAME.registerComponent('play-pause', {
 			init: function () {
-				var myVideo = document.querySelector('#YOUR-VIDEO-ID');
+				var myVideo = document.querySelector('#love');
 				var videoControls = document.querySelector('#videoControls');
+				this.el.addEventListener('click', function () {
+					if (myVideo.paused) {
+						myVideo.play();
+						videoControls.setAttribute('src', '#pause');
+					} else {
+						myVideo.pause();
+						videoControls.setAttribute('src', '#play');
+					}
+				});
+			}
+		});
+	</script>
+    
+    
+    <script>
+		AFRAME.registerComponent('play-pause2', {
+			init: function () {
+				var myVideo = document.querySelector('#depressed-video');
+				var videoControls = document.querySelector('#videoControls2');
+				this.el.addEventListener('click', function () {
+					if (myVideo.paused) {
+						myVideo.play();
+						videoControls.setAttribute('src', '#pause');
+					} else {
+						myVideo.pause();
+						videoControls.setAttribute('src', '#play');
+					}
+				});
+			}
+		});
+	</script>
+       
+    <script>
+		AFRAME.registerComponent('play-pause3', {
+			init: function () {
+				var myVideo = document.querySelector('#wholesome-video');
+				var videoControls = document.querySelector('#videoControls3');
+				this.el.addEventListener('click', function () {
+					if (myVideo.paused) {
+						myVideo.play();
+						videoControls.setAttribute('src', '#pause');
+					} else {
+						myVideo.pause();
+						videoControls.setAttribute('src', '#play');
+					}
+				});
+			}
+		});
+	</script>
+    
+    
+     <script>
+		AFRAME.registerComponent('play-pause4', {
+			init: function () {
+				var myVideo = document.querySelector('#old-video');
+				var videoControls = document.querySelector('#videoControls4');
 				this.el.addEventListener('click', function () {
 					if (myVideo.paused) {
 						myVideo.play();
@@ -65,7 +121,7 @@
           <audio id="wholesome-audio" src="assets/wholesome/wholesome-audio.mp3"  preload="auto" loop="true"></audio>   
            
           
-          <video id="old-video" src="assets/old/old-video.mp4" preload="auto" autoplay="true" loop="true"></video>
+          <video id="old-video" src="assets/old /old-video.mp4" preload="auto" loop="true"></video>
           <audio id="old-audio" src="assets/old/old-audio-1.mp3" preload="auto" loop="true"></audio>    
              
           
@@ -74,7 +130,7 @@
           <img id="pause" src="assets/L26-ASSETs/pause.png">
           
           
-          <video id="YOUR-VIDEO-ID" src="assets/love-video.mp4" loop="true"></video>
+          <video id="love" src="assets/love-video.mp4" loop="true"></video>
           
           
          <img id="meme1" src="assets/meme1.jpg" >
@@ -227,10 +283,21 @@
         <a-entity
                   
             camera position="0 1.6 0"
-            look-controls>
+            look-controls
+                  
+           
+                  >
+            <a-entity
+                      
+                       cursor
+                      
+            position="0 0 -1"      
+            geometry="primitive: sphere; radius: 0.005; color: white"
+            material="color: white; shader: flat; opacity: 0.7"
+                      
+                      
+                      ></a-entity>
         
-            <a-cursor></a-cursor>
-            
         </a-entity>
       
       </a-entity>
@@ -457,9 +524,9 @@
     
     
     
-    <a-video src="#YOUR-VIDEO-ID" width="10" height="5" position="0 4 -14">
+    <a-video src="#love" width="10" height="5" position="0 4 -13">
 			<!-- Play/Pause -->
-			<a-image id="videoControls" src="#play" position="0 -3 0" scale="0.5 0.5 1"
+			<a-image id="videoControls" src="#play" position="0 -3 0" scale="1 1 1"
 					 play-pause>
 			</a-image>
 		</a-video>
@@ -1037,16 +1104,17 @@
     
     
     
-       <a-video src="#depressed-video" width="10" height="5" position="0 3 -14" rotation="0 0 0" loop="true" on="click";
-                
-                
     
-         
-       
-         
-         >
-      
-      </a-video> 
+    <a-video src="#depressed-video" width="10" height="5" position="0 4 -14">
+			<!-- Play/Pause -->
+			<a-image id="videoControls2" src="#play" position="0 -3 0" scale="1 1 1"
+					 play-pause2>
+			</a-image>
+		</a-video>
+    
+    
+    
+ 
     
  <a-entity position="0 3 -14"  sound="src: #depressed-audio; autoplay: true; loop: true;
                volume: 1;
@@ -1060,7 +1128,22 @@
   
  
       
-<!-- PILLARS SIDES -->
+<!-- PILLARS SIDES
+
+   
+    
+       <a-video src="#depressed-video" width="10" height="5" position="0 3 -14" rotation="0 0 0" loop="true" on="click";
+                
+                
+    
+         
+       
+         
+         >
+      
+      </a-video> 
+
+-->
       
       <!-- RIGHT  -->
       
@@ -1505,21 +1588,32 @@
     
   
       
-<!-- VIDEO 2 TEST -->
-    
+<!-- VIDEO 2 TEST       
   <a-video src="#wholesome-video" width="10" height="5" position="0 3 -14" rotation="0 0 0" autoplay="true" loop="true"
     
 
        
          
          >
-      
-      
-      <a-sound src="https://www.youtube.com/watch?v=9kgqLGVKkdI&list=PLT06G6aSWZdj9oiFZInsMCWJoPcqFW75h&index=59&t=40s" position="0 3 -14" rotation="0 0 0" autoplay="true" loop="true"></a-sound>
+
       
       </a-video> 
-    
+     -->
+
    
+    
+    
+       
+    
+    <a-video src="#wholesome-video" width="10" height="5" position="0 4 -14">
+			<!-- Play/Pause -->
+			<a-image id="videoControls3" src="#play" position="0 -3 0" scale="1 1 1"
+					 play-pause3>
+			</a-image>
+		</a-video>
+    
+    
+    
     
     <!--
     
@@ -2025,10 +2119,9 @@
           position="0 3 -13" sound="src: #old-sound; autoplay: true positional: true loop: true;
                volume: 10;
                refDistance: 0.2;
-               rollofFactor: 0.2;"></a-entity> -->
-    
-    
-  
+               rollofFactor: 0.2;"></a-entity> 
+
+
    <a-video src="#old-video" width="10" height="5" position="0 3 -14" rotation="0 0 0" autoplay="true" loop="true"
             
             
@@ -2048,8 +2141,29 @@
               
               ></a-entity>
 
+
+
+sound="src: #old-audio; autoplay: true; loop: true;
+               volume: 1;
+               refDistance: 0.1;
+               rollofFactor: 0.1;"
+
+-->
+    
+    
+  
+
     
      
+    
+    <a-video src="#old-video" width="10" height="5" position="0 4 -13"  >
+			<!-- Play/Pause -->
+			<a-image id="videoControls4" src="#play" position="0 -3 0" scale="1 1 1"
+					 play-pause4>
+			</a-image>
+		</a-video>
+    
+    
 
 
   
