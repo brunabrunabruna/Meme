@@ -22,14 +22,17 @@
       
       <a-assets>
           
-    
+         
         
+          <audio id="love-audio" src="assets/love-audio.mp3" preload="auto" loop="true"></audio>
+          <audio id="sound1" src="assets/sound1.mp3" preload="auto" loop="true"></audio>
+          
           
           <video id="stonks-video" src="assets/stonks-video.mp4" preload="auto" autoplay="true" loop="true"></video>
-          <audio id="stonks-audio" src="assets/stonks-audio.mp3"  preload="auto"  loop="true"></audio>     
+          <audio id="stonks-audio" src="assets/stonks-audio.mp3" preload="auto"></audio>   
           
           <video id="depressed-video" src="assets/depressed/depressed-video.mp4" preload="auto" autoplay="true" loop="true"></video>
-          <audio id="depressed-audio" src="assets/depressed/depressed-audio.mp3"  preload="auto"  loop="true"></audio>    
+          <audio id="depressed-audio" src="assets/depressed/depressed-audio.mp3" loop="true"></audio>  
            
           <video id="wholesome-video" src="assets/wholesome/wholesome-video.mp4" preload="auto" autoplay="true" loop="true"></video>
           <audio id="wholesome-audio" src="assets/wholesome/wholesome-audio.mp3"  preload="auto" loop="true"></audio>   
@@ -232,10 +235,8 @@
                rollofFactor: 1"
              
         
-        ></a-box>  -->
+        -->
 
-    
-  
 
     
 <!-- THIS ENTITY WRAPS UP THE WHOLE 4 MODULES -->  
@@ -451,17 +452,51 @@
       
       </a-video> 
     
+   
+
+ 
     
-     <a-entity position="0 3 -14"  sound="src: #stonks-audio; autoplay: true; loop: true;
+    <a-box mixin="look-at"
+        position="0 1 -4"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="4"
+        material="src: #meme2;
+                  shader: flat;
+                  repeat: 1 1;
+                  "
+             
+        sound="src : #love-audio;
+               on:click;
                volume: 1;
+               refDistance: 1;
+               rollofFactor: 1"
+             
+        
+        ></a-box>
+    
+    
+    
+    <!--        
+
+
+     <a-sound src="https://cdn.aframe.io/basic-guide/audio/backgroundnoise.wav" autoplay="true"
+    position="-3 1 -4"></a-sound>
+
+
+
+ 
+     <a-entity position="0 3 -14"  geometry="primitive: box" sound="src: #sound1; autoplay:true; loop: true;
+               volume: 10;
                refDistance: 0.2;
                rollofFactor: 0.2;">
  </a-entity> 
 
-   
-    
-    
-    <!--      <a-box mixin="look-at"
+
+
+
+<a-box mixin="look-at"
         position="0 1 -13"
         opacity="1"
         width="2"
@@ -1436,16 +1471,11 @@
          >
       
       
-      <a-sound ></a-sound>
+      <a-sound src="https://www.youtube.com/watch?v=9kgqLGVKkdI&list=PLT06G6aSWZdj9oiFZInsMCWJoPcqFW75h&index=59&t=40s" position="0 3 -14" rotation="0 0 0" autoplay="true" loop="true"></a-sound>
       
       </a-video> 
     
-     <a-entity position="0 3 -14"  sound="src: #wholesome-audio; on: click; loop: true;
-                                          
-               volume: 1;
-               refDistance: 1;           
-               rollofFactor: 1;"
-               ></a-entity>
+   
     
     <!--
     
