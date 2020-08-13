@@ -352,18 +352,18 @@
 <!-- TEXT ABOVE VIDEO-->
       
     <a-entity
-              position="0 5.2 -12"
+              position="0 0.8 -13"
               scale="5 5 5"
               text=" value: Surreal;
                      color: pink;
                      align: center;
-                     wrapCount: 10"
+                     wrapCount: 30"
               geometry="primitive: plane; width: auto; height: auto; "
               material="color: #ffffff; shader: flat; visible: false"
               event-set__enter="_event: mouseenter; scale: 6 6 6"
               event-set__leave="_event: mouseleave; scale: 5 5 5"
               animation="property: position;
-                         to: 0 5 -12;
+                         to: 0 1 -13;
                          dir: alternate;
                          dur: 3000;
                          easing: linear;
@@ -1107,7 +1107,7 @@
     
     <a-video src="#depressed-video" width="10" height="5" position="0 4 -14">
 			<!-- Play/Pause -->
-			<a-image id="videoControls2" src="#play" position="0 -3 0" scale="1 1 1"
+			<a-image id="videoControls2" src="#play" position="-2.5 -3 0.5" scale="1 1 1"
 					 play-pause2>
 			</a-image>
 		</a-video>
@@ -1607,7 +1607,7 @@
     
     <a-video src="#wholesome-video" width="10" height="5" position="0 4 -14">
 			<!-- Play/Pause -->
-			<a-image id="videoControls3" src="#play" position="0 -3 0" scale="1 1 1"
+			<a-image id="videoControls3" src="#play" position="-2.5 -3 0.5"scale="1 1 1"
 					 play-pause3>
 			</a-image>
 		</a-video>
@@ -2158,7 +2158,7 @@ sound="src: #old-audio; autoplay: true; loop: true;
     
     <a-video src="#old-video" width="10" height="5" position="0 4 -13"  >
 			<!-- Play/Pause -->
-			<a-image id="videoControls4" src="#play" position="0 -3 0" scale="1 1 1"
+			<a-image id="videoControls4" src="#play" position="-2.5 -3 0.5" scale="1 1 1"
 					 play-pause4>
 			</a-image>
 		</a-video>
