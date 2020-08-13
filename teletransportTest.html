@@ -24,14 +24,17 @@
     <script>
 		AFRAME.registerComponent('play-pause', {
 			init: function () {
-				var myVideo = document.querySelector('#love');
+				var sound1 = document.querySelector('#sound1');
+                var myVideo = document.querySelector('#love');
 				var videoControls = document.querySelector('#videoControls');
 				this.el.addEventListener('click', function () {
 					if (myVideo.paused) {
 						myVideo.play();
+                        sound1.pause();
 						videoControls.setAttribute('src', '#pause');
 					} else {
 						myVideo.pause();
+                        sound1.play();
 						videoControls.setAttribute('src', '#play');
 					}
 				});
@@ -43,14 +46,17 @@
     <script>
 		AFRAME.registerComponent('play-pause2', {
 			init: function () {
+                var sound1 = document.querySelector('#sound1');
 				var myVideo = document.querySelector('#depressed-video');
 				var videoControls = document.querySelector('#videoControls2');
 				this.el.addEventListener('click', function () {
 					if (myVideo.paused) {
 						myVideo.play();
+                        sound1.pause();
 						videoControls.setAttribute('src', '#pause');
 					} else {
 						myVideo.pause();
+                        sound1.play();
 						videoControls.setAttribute('src', '#play');
 					}
 				});
@@ -61,14 +67,17 @@
     <script>
 		AFRAME.registerComponent('play-pause3', {
 			init: function () {
+                var sound1 = document.querySelector('#sound1');
 				var myVideo = document.querySelector('#wholesome-video');
 				var videoControls = document.querySelector('#videoControls3');
 				this.el.addEventListener('click', function () {
 					if (myVideo.paused) {
 						myVideo.play();
+                        sound1.pause();
 						videoControls.setAttribute('src', '#pause');
 					} else {
 						myVideo.pause();
+                        sound1.play();
 						videoControls.setAttribute('src', '#play');
 					}
 				});
@@ -80,14 +89,17 @@
      <script>
 		AFRAME.registerComponent('play-pause4', {
 			init: function () {
+                var sound1 = document.querySelector('#sound1');
 				var myVideo = document.querySelector('#old-video');
 				var videoControls = document.querySelector('#videoControls4');
 				this.el.addEventListener('click', function () {
 					if (myVideo.paused) {
 						myVideo.play();
+                        sound1.pause();
 						videoControls.setAttribute('src', '#pause');
 					} else {
 						myVideo.pause();
+                        sound1.play();
 						videoControls.setAttribute('src', '#play');
 					}
 				});
@@ -106,9 +118,8 @@
           
          
         
-          <audio id="love-video" src="assets/love-video.mp4" preload="auto" loop="true"></audio>
           <audio id="love-audio" src="assets/love-audio.mp3" preload="auto" loop="true" ></audio>
-          <audio id="sound1" src="assets/sound1.mp3" preload="auto" loop="true"></audio>
+          <audio id="sound1" src="assets/sound1.mp3" preload="auto" loop="true" autoplay></audio>
           
           
           <video id="stonks-video" src="assets/stonks-video.mp4" preload="auto" loop="true"></video>
@@ -130,7 +141,7 @@
           <img id="pause" src="assets/L26-ASSETs/pause.png">
           
           
-          <video id="love" src="assets/love-video.mp4" loop="true"></video>
+          <video id="love" src="assets/love-video.mp4" ></video>
           
           
          <img id="meme1" src="assets/meme1.jpg" >
