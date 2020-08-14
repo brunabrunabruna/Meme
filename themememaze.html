@@ -1,0 +1,2617 @@
+<head>
+  <title>testing a bunch of stuff</title>
+  <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+  <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
+  <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+  <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+  <script src="https://unpkg.com/super-hands@3.0.0/dist/super-hands.min.js"></script>
+  <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-event-set-component@5.0.0/dist/aframe-event-set-component.min.js"></script>
+    
+     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+    
+    
+        <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+        <script src="https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.min.js"></script>
+        <script src="https://unpkg.com/aframe-gradient-sky@1.0.4/dist/gradientsky.min.js"></script>
+        
+
+        <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
+
+        <script src="https://unpkg.com/aframe-teleport-controls/dist/aframe-teleport-controls.min.js"></script>
+
+    <script>
+		AFRAME.registerComponent('play-pause', {
+			init: function () {
+				var sound1 = document.querySelector('#sound1');
+                var myVideo = document.querySelector('#love');
+				var videoControls = document.querySelector('#videoControls');
+				this.el.addEventListener('click', function () {
+					if (myVideo.paused) {
+						myVideo.play();
+                        sound1.pause();
+						videoControls.setAttribute('src', '#pause');
+					} else {
+						myVideo.pause();
+                        sound1.play();
+						videoControls.setAttribute('src', '#play');
+					}
+				});
+			}
+		});
+	</script>
+    
+    
+    <script>
+		AFRAME.registerComponent('play-pause2', {
+			init: function () {
+                var sound1 = document.querySelector('#sound1');
+				var myVideo = document.querySelector('#depressed-video');
+				var videoControls = document.querySelector('#videoControls2');
+				this.el.addEventListener('click', function () {
+					if (myVideo.paused) {
+						myVideo.play();
+                        sound1.pause();
+						videoControls.setAttribute('src', '#pause');
+					} else {
+						myVideo.pause();
+                        sound1.play();
+						videoControls.setAttribute('src', '#play');
+					}
+				});
+			}
+		});
+	</script>
+       
+    <script>
+		AFRAME.registerComponent('play-pause3', {
+			init: function () {
+                var sound1 = document.querySelector('#sound1');
+				var myVideo = document.querySelector('#wholesome-video');
+				var videoControls = document.querySelector('#videoControls3');
+				this.el.addEventListener('click', function () {
+					if (myVideo.paused) {
+						myVideo.play();
+                        sound1.pause();
+						videoControls.setAttribute('src', '#pause');
+					} else {
+						myVideo.pause();
+                        sound1.play();
+						videoControls.setAttribute('src', '#play');
+					}
+				});
+			}
+		});
+	</script>
+    
+    
+     <script>
+		AFRAME.registerComponent('play-pause4', {
+			init: function () {
+                var sound1 = document.querySelector('#sound1');
+				var myVideo = document.querySelector('#old-video');
+				var videoControls = document.querySelector('#videoControls4');
+				this.el.addEventListener('click', function () {
+					if (myVideo.paused) {
+						myVideo.play();
+                        sound1.pause();
+						videoControls.setAttribute('src', '#pause');
+					} else {
+						myVideo.pause();
+                        sound1.play();
+						videoControls.setAttribute('src', '#play');
+					}
+				});
+			}
+		});
+	</script>
+    
+    
+    
+</head>
+
+<body>
+  <a-scene antialias="true" inspector stats>
+      
+      <a-assets>
+          
+         
+        
+          <audio id="love-audio" src="assets/love-audio.mp3" preload="auto" loop="true" ></audio>
+          <audio id="sound1" src="assets/sound1.mp3" preload="auto" loop="true" autoplay></audio>
+          
+          
+          <video id="stonks-video" src="assets/stonks-video.mp4" preload="auto" loop="true"></video>
+          <audio id="stonks-audio" src="assets/stonks-audio.mp3" preload="auto"></audio>   
+          
+          <video id="depressed-video" src="assets/depressed/depressed-video.mp4" preload="auto" loop="true"></video>
+          <audio id="depressed-audio" src="assets/depressed/depressed-audio.mp3" loop="true"></audio>  
+           
+          <video id="wholesome-video" src="assets/wholesome/wholesome-video.mp4" preload="auto" loop="true"></video>
+          <audio id="wholesome-audio" src="assets/wholesome/wholesome-audio.mp3"  preload="auto" loop="true"></audio>   
+           
+          
+          <video id="old-video" src="assets/old/old-video.mp4" preload="auto" loop="true"></video>
+           
+             
+          
+          
+          <img id="play" src="assets/L26-ASSETs/play.png">
+          <img id="pause" src="assets/L26-ASSETs/pause.png">
+          
+          
+          <video id="love" src="assets/love-video.mp4" ></video>
+          
+          
+         <img id="meme1" src="assets/meme1.jpg" >
+         <img id="meme2" src="assets/meme2.jpg" >
+         <img id="meme3" src="assets/meme3.jpg" >
+         <img id="meme4" src="assets/meme4.jpg" >
+         <img id="meme5" src="assets/meme5.jpeg" >
+         <img id="meme6" src="assets/meme6.jpg" >
+         <img id="meme7" src="assets/meme7.jpg" >
+         <img id="meme8" src="assets/meme8.jpg" >
+         <img id="meme9" src="assets/meme9.jpg" >
+         <img id="meme10" src="assets/meme10.jpg" >
+         <img id="meme11" src="assets/meme11.jpg" >
+         <img id="meme12" src="assets/meme12.jpg" >
+
+         <img id="meme14" src="assets/meme14.jpg" >
+         <img id="meme15" src="assets/meme15.jpg" >
+         <img id="meme16" src="assets/meme16.jpg" >
+         <img id="meme17" src="assets/meme17.jpg" >
+         <img id="meme18" src="assets/meme18.jpg" >
+         <img id="meme19" src="assets/meme19.jpg" >
+         <img id="meme20" src="assets/meme20.jpg" >
+         <img id="meme21" src="assets/meme21.jpg" >
+          
+          
+          
+          
+             
+         <img id="depressed1" src="assets/depressed/1.jpg" >
+         <img id="depressed2" src="assets/depressed/2.jpg" >
+         <img id="depressed3" src="assets/depressed/3.jpg" >
+         <img id="depressed4" src="assets/depressed/4.jpg" >
+         <img id="depressed5" src="assets/depressed/5.jpg" >
+         <img id="depressed6" src="assets/depressed/6.jpg" >
+         <img id="depressed7" src="assets/depressed/7.jpg" >
+         <img id="depressed8" src="assets/depressed/8.jpg" >
+         <img id="depressed9" src="assets/depressed/9.jpg" >
+         <img id="depressed10" src="assets/depressed/10.jpg" >
+         <img id="depressed11" src="assets/depressed/11.jpg" >
+         <img id="depressed12" src="assets/depressed/12.jpg" >
+         <img id="depressed13" src="assets/depressed/13.jpg" >
+         <img id="depressed14" src="assets/depressed/14.jpg" >
+         <img id="depressed15" src="assets/depressed/11.jpg" >
+         <img id="depressed11" src="assets/depressed/15.jpg" >
+         <img id="depressed16" src="assets/depressed/16.jpg" >
+         <img id="depressed17" src="assets/depressed/17.jpg" >
+         <img id="depressed18" src="assets/depressed/18.jpg" >
+         <img id="depressed19" src="assets/depressed/19.jpg" >
+         <img id="depressed20" src="assets/depressed/20.jpg" >
+         <img id="depressed21" src="assets/depressed/21.jpg" >
+         <img id="depressed22" src="assets/depressed/22.jpg" >
+         <img id="depressed23" src="assets/depressed/23.jpg" >
+         <img id="depressed24" src="assets/depressed/24.jpg" >
+         <img id="depressed25" src="assets/depressed/25.jpg" >
+         <img id="depressed26" src="assets/depressed/26.jpg" >
+         <img id="depressed27" src="assets/depressed/27.jpg" > 
+          
+          
+        
+         <img id="wholesome1" src="assets/wholesome/1.jpg" >
+         <img id="wholesome2" src="assets/wholesome/2.jpg" >
+         <img id="wholesome3" src="assets/wholesome/3.jpeg" >
+         <img id="wholesome4" src="assets/wholesome/4.jpeg" >
+         <img id="wholesome5" src="assets/wholesome/5.jpeg" >
+         <img id="wholesome6" src="assets/wholesome/6.jpg" >
+         <img id="wholesome7" src="assets/wholesome/7.jpg" >
+         <img id="wholesome8" src="assets/wholesome/8.jpg" >
+         <img id="wholesome9" src="assets/wholesome/9.jpg" >
+         <img id="wholesome10" src="assets/wholesome/10.jpg" >
+         <img id="wholesome11" src="assets/wholesome/11.jpg" >
+         <img id="wholesome12" src="assets/wholesome/12.jpg" >
+         <img id="wholesome13" src="assets/wholesome/13.jpg" >
+         <img id="wholesome14" src="assets/wholesome/14.jpg" >
+         <img id="wholesome15" src="assets/wholesome/15.jpg" >
+         <img id="wholesome16" src="assets/wholesome/16.jpg" >
+         <img id="wholesome17" src="assets/wholesome/17.jpg" >
+         <img id="wholesome18" src="assets/wholesome/18.jpg" >
+         <img id="wholesome19" src="assets/wholesome/19.jpg" >
+         <img id="wholesome20" src="assets/wholesome/20.jpg" >
+         <img id="wholesome21" src="assets/wholesome/21.jpg" >
+         <img id="wholesome22" src="assets/wholesome/22.jpg" >
+         <img id="wholesome23" src="assets/wholesome/23.jpg" >
+         <img id="wholesome24" src="assets/wholesome/24.jpg" >
+        
+          
+          
+          
+          
+         <img id="old1" src="assets/old/1.jpg" >
+         <img id="old2" src="assets/old/2.jpg" >
+         <img id="old3" src="assets/old/3.jpg" >
+         <img id="old4" src="assets/old/4.jpeg" >
+         <img id="old5" src="assets/old/5.jpg" >
+         <img id="old6" src="assets/old/6.jpg" >
+         <img id="old7" src="assets/old/7.jpg" >
+         <img id="old8" src="assets/old/8.jpg" >
+         <img id="old9" src="assets/old/9.jpg" >
+         <img id="old10" src="assets/old/10.jpeg" >
+         <img id="old11" src="assets/old/11.jpg" >
+         <img id="old12" src="assets/old/12.jpg" >
+         <img id="old13" src="assets/old/13.jpeg" >
+         <img id="old14" src="assets/old/14.jpeg" >
+         <img id="old15" src="assets/old/15.jpg" >
+         <img id="old16" src="assets/old/16.jpg" >
+         <img id="old17" src="assets/old/17.jpg" >
+         <img id="old18" src="assets/old/18.jpg" >
+         <img id="old19" src="assets/old/19.jpg" >
+         <img id="old20" src="assets/old/20.jpg" >
+         <img id="old21" src="assets/old/21.jpg" >
+         <img id="old22" src="assets/old/22.jpg" >
+         <img id="old23" src="assets/old/23.jpg" >
+         <img id="old24" src="assets/old/24.jpg" >
+         <img id="old25" src="assets/old/25.jpg" >
+          
+          
+          
+          
+          
+          
+          
+          
+         
+          
+          
+          <a-mixin  
+           id="appear"     
+           event-set__enter="_event: mouseenter; opacity: 1; dur: 1000"
+           event-set__leave="_event: mouseleave; opacity: 1" 
+                 
+                 
+        ></a-mixin> 
+       
+          
+          <a-mixin  
+           id="look-at"     
+           look-at="#cam-rig"
+                    
+        ></a-mixin> 
+      
+      
+      </a-assets>
+    
+      
+        
+<!-- CAMERA -->
+         
+      
+      <a-entity id="cam-rig"  movement-controls="speed: 0.9" position="0 0 0">
+          
+        <a-entity
+                  
+            camera position="0 1.6 0"
+            look-controls
+                  
+           
+                  >
+            <a-entity
+                      
+                       cursor
+                      
+            position="0 0 -1"      
+            geometry="primitive: sphere; radius: 0.005; color: white"
+            material="color: white; shader: flat; opacity: 0.7"
+                      
+                      
+                      ></a-entity>
+        
+        </a-entity>
+      
+      </a-entity>
+    
+        
+<!-- Match Oculus Go controller if present, regardless of hand. -->
+      <a-entity oculus-go-controls></a-entity>
+       
+    
+<!-- ENVIRONMENT -->
+      
+      <a-entity environment="preset: starry"></a-entity> 
+      
+<!--     SCENE OBJECTS   -->
+
+      <a-image src="#checkpoint-img" position=" -3 2.5 -3"   checkpoint="offset: -1 0 0" 
+               look-at="#cam-rig">
+      </a-image>
+    
+ <!--LEFT     
+  
+          <a-box mixin="look-at"
+        position="-3 1 -6"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="0.1"
+        material="src: #meme2;
+                  shader: flat;
+                  repeat: 1 1;
+                  "
+             
+        sound="src : #sound1;
+               on: click;
+               volume: 1;
+               refDistance: 1;
+               rollofFactor: 1"
+             
+        
+        -->
+
+
+    
+<!-- THIS ENTITY WRAPS UP THE WHOLE 4 MODULES -->  
+    
+<a-entity position="0 0 -4">
+
+<!-- MODULE 1 -->     
+
+<a-entity>    
+    
+<!-- TEXT ABOVE VIDEO
+      
+    <a-entity
+              position="0 0.8 -13"
+              scale="5 5 5"
+              text=" value: Surreal;
+                     color: pink;
+                     align: center;
+                     wrapCount: 30"
+              geometry="primitive: plane; width: auto; height: auto; "
+              material="color: #ffffff; shader: flat; visible: false"
+              event-set__enter="_event: mouseenter; scale: 6 6 6"
+              event-set__leave="_event: mouseleave; scale: 5 5 5"
+              animation="property: position;
+                         to: 0 1 -13;
+                         dir: alternate;
+                         dur: 3000;
+                         easing: linear;
+                         loop: true;"
+              
+            
+                    ></a-entity> -->
+        
+    
+    
+<!-- INTRODUCTION 1-->
+      
+    <a-entity
+              position="-0.4 2 1.1"
+              scale="5 5 5"
+              text=" value: Surreal Memes are a representation of
+                    the nihilist world view and abstract thoughts
+                    present in the minds of the young generation
+                  ;
+                     color: pink;
+                     align: center;
+                     wrapCount: 100"
+              geometry="primitive: plane; width: 2; height: 2; "
+              material="color: #000000; shader: flat; visible: true"
+             
+            
+                    ></a-entity>   
+    
+    <a-entity
+              position="-0.4 1.3 1.1"
+              scale="3 3 3"
+              text=" value: please walk through this poster 
+                    to enter the meme maze;
+                     color: pink;
+                     align: center;
+                     wrapCount: 100"
+              geometry="primitive: plane; width: 2; height: 2; "
+              material="color: #000000; shader: flat; visible: false"
+             
+            
+                    ></a-entity>
+    
+    
+    
+    
+       
+<!-- END TEXT -->
+    
+    
+    
+       
+    <a-entity
+              position="0 2 4.1"
+              scale="1 1 1"
+              text=" value: This is the end of the meme maze
+                    
+                    Please walk through this poster 
+                    to start again
+                  ;
+                     color: pink;
+                     align: center;
+                     wrapCount: 70"
+              geometry="primitive: plane; width: 5; height: 10; "
+              material="color: #000000; shader: flat; visible: true"
+             
+            
+                    ></a-entity>   
+    
+      
+    
+   
+<!-- ARROW NEXT 
+
+ event-set__enter="_event: mouseenter; text.color: blue"
+ event-set__leave="_event: mouseleave; text.color: pink"
+-->  
+      
+       <a-entity
+              position="4 2 -13.5"
+              scale="2 2 2"
+              text=" value: >;
+                     color: pink;
+                     align: center;
+                     wrapCount: 2"
+              geometry="primitive: plane; width: auto; height: auto; "
+              material="color: #ffffff; shader: flat; visible: false"
+             
+              animation="property: position;
+                         to: 5 2 -13.5;
+                         dir: alternate;
+                         dur: 3000;
+                         easing: linear;
+                         loop: true;"
+            
+                    ></a-entity> 
+   
+    <!-- ARROW IMG 
+    
+    
+    <a-plane
+             position="1 2 -11"
+             material="src: #arrow; transparent: false; alphaTest: 0.5 "
+        
+             
+    ></a-plane>  -->
+
+    
+     
+   <!-- ARROW FLOOR  -->
+   
+    
+     
+       <a-entity
+              position="0 0.1 -1"
+              scale="2 2 2"
+              text=" value: ^;
+                     color: pink;
+                     align: center;
+                     wrapCount: 2"
+              geometry="primitive: plane; width: auto; height: auto;"
+              material="color: #ffffff; shader: flat; visible: false"
+             
+             
+              animation="property: position;
+                         to: 0 0.1 -2;
+                         dir: alternate;
+                         dur: 3000;
+                         easing: linear;
+                         loop: true;"
+              
+            
+                    ></a-entity> 
+   
+    
+  
+ 
+    
+    
+<!-- VIDEO 1 SURREAL   
+    
+<a-video src="#stonks-mute" width="10" height="5" position="0 3 -14" rotation="0 0 0" autoplay="true" loop="true"
+         
+         sound="src: #stonks-audio; autoplay: true; loop: true;
+               volume: 1;
+               refDistance: 1;
+               rollofFactor: 1"
+         
+       
+         
+         >
+           
+      
+      </a-video>
+
+
+
+-->
+    
+    
+    
+    <a-video src="#love" width="10" height="5" position="0 4 -14">
+			<!-- Play/Pause -->
+			<a-image id="videoControls" src="#play" position="-2.5 -3 0.5" scale="1 1 1"
+					 play-pause>
+			</a-image>
+		</a-video>
+    
+    
+    
+    
+    
+    
+    
+    <!--    
+
+
+
+
+    <a-video src="#love-video" width="10" height="5" position="0 3 -14" rotation="0 0 0" autoplay="true" loop="true"
+             
+            
+         >
+        
+  
+      
+      </a-video> 
+    
+   
+
+ 
+     <a-sound src="https://cdn.aframe.io/basic-guide/audio/backgroundnoise.wav" autoplay="true"
+    position="-3 1 -4"></a-sound>
+
+
+
+
+
+
+     <a-entity position="0 3 -14" sound="src: #love-audio; preload: true; autoplay:true; loop: true;
+               volume: 1;
+               refDistance: 0.2;
+               rollofFactor: 0.2;">
+ </a-entity> 
+
+
+ 
+              sound="src: #love-audio; autoplay: true; loop: true;
+               volume: 1;
+               refDistance: 1;
+               rollofFactor: 1"
+         
+     
+
+
+    
+    <a-box mixin="look-at"
+        position="0 1 -4"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="4"
+        material="src: #meme2;
+                  shader: flat;
+                  repeat: 1 1;
+                  "
+             
+        sound="src : #love-audio;
+               on:click;
+               volume: 1;
+               refDistance: 1;
+               rollofFactor: 1"
+             
+        
+        ></a-box>
+    
+    
+
+
+
+ 
+
+
+
+<a-box mixin="look-at"
+        position="0 1 -13"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="0.1"
+        material="src: #meme2;
+                  shader: flat;
+                  repeat: 1 1;
+                  "
+             
+        sound="src : #stonks-audio;
+               autoplay:true;
+               volume: 1;
+               refDistance: 1;
+               rollofFactor: 1"
+             
+        
+        ></a-box>  -->
+    
+    
+    
+<!--SOUND TEST    
+  
+          <a-box 
+        position="0 3 -13"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="0.1"
+        material="src: #meme2;
+                  shader: flat;
+                  repeat: 1 1;
+                  "
+             
+        sound="src : #sound1;
+               on: click;
+               volume: 1;
+               refDistance: 1;
+               rollofFactor: 1"
+             
+        
+        ></a-box> --> 
+
+
+      
+<!-- PILLARS SIDES -->
+      
+      <!-- RIGHT  -->
+      
+      <a-box 
+        position="5 3 -9"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #meme1;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+      <a-box 
+        position="5 1.5 -6" 
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #meme2;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+      <a-box 
+        position="5 1.5 -3"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #meme18;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+      <!-- LEFT -->
+      
+      
+         <a-box 
+        position="-5 3 -12"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="3.5"
+        material="src: #meme12;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+      <a-box 
+        position="-5 3 -9"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #meme10;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+      <a-box 
+        position="-5 3 -6"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #meme20;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+            
+      <a-box 
+        position="-5 3 -3"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="4"
+        material="src: #meme17;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+    
+      
+      
+      
+      <!-- BACK -->
+      
+     
+      <a-box 
+        position="3 2 0"
+        opacity="1"
+        width="2"
+        height="4"
+        depth="2"
+        material="src: #meme8;
+                  shader: flat;
+                  repeat: 1 2"
+       ></a-box>
+      
+      
+      <a-box 
+        position="-3 2 0"
+        opacity="1"
+        width="2"
+        height="4"
+        depth="2"
+        material="src: #meme9;
+                  shader: flat;
+                  repeat: 1 2"
+       ></a-box>
+      
+  <a-box 
+        position="3 3 2"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="3"
+        material="src: #meme10;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+      
+      <a-box 
+        position="-3 3 3"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #meme11;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+  
+      
+<!-- CEILING -->        
+
+      
+<a-entity > 
+    
+  <a-box look-at="#cam-rig" 
+        position="-3 7 0"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #meme1;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+       <a-box look-at="#cam-rig" 
+        position="0 7 0"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #meme21;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      <a-box look-at="#cam-rig"
+        position="3 7 0"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #meme20;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+   
+    
+      <a-box look-at="#cam-rig" 
+        position="-3 7 -3"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #meme19;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+       <a-box look-at="#cam-rig" 
+        position="0 7 -3"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #meme8;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      <a-box look-at="#cam-rig"
+        position="3 7 -3"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #meme7;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      <a-box look-at="#cam-rig"
+        position="-3 7 -6"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #meme9;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+       <a-box look-at="#cam-rig" 
+        position="0 7 -6"
+        opacity="1"
+        width="4"
+        height="2"
+        depth="2"
+        material="src: #meme10;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      <a-box look-at="#cam-rig" 
+        position="3 7 -6"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #meme11;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      <a-box look-at="#cam-rig" 
+        position="-3 7 -9"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="3.5"
+        material="src: #meme12;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+       <a-box look-at="#cam-rig" 
+        position="0 7 -9"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #meme21;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      <a-box look-at="#cam-rig" 
+        position="3 7 -9"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #meme14;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      
+        <a-box look-at="#cam-rig" 
+        position="-3 7 -12"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #meme15;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+       <a-box look-at="#cam-rig" 
+        position="0 7 -12"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #meme16;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      <a-box look-at="#cam-rig" 
+        position="3 7 -12"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #meme17; 
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      
+      
+ </a-entity>   
+      
+    
+    
+</a-entity> 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+ <!-- MODULE 2 -->       
+    
+<a-entity position="10 0 -12"
+          rotation="0 -90 0">  
+    
+   
+    
+        
+<!-- INTRODUCTION 2-->
+      
+    <a-entity
+              position="0 2 2"
+              scale="5 5 5"
+              text=" value: Memes help us to express our emotions
+                    better. For many, it is also a coping mechanism 
+                    against sadness or depression
+                  ;
+                     color: pink;
+                     align: center;
+                     wrapCount: 100"
+              geometry="primitive: plane; width: 2; height: 2; "
+              material="color: #000000; shader: flat; visible: true"
+             
+            
+                    ></a-entity>   
+    
+    <a-entity
+              position="0 1.3 2.1"
+              scale="3 3 3"
+              text=" value: please walk through this poster 
+                    to continue the tour;
+                     color: pink;
+                     align: center;
+                     wrapCount: 100"
+              geometry="primitive: plane; width: 2; height: 2; "
+              material="color: #000000; shader: flat; visible: false"
+             
+            
+                    ></a-entity>
+    
+    
+<!-- TEXT ABOVE VIDEO
+      
+  <a-entity
+              position="0 5.2 -12"
+              scale="5 5 5"
+              text=" value: Depression;
+                     color: pink;
+                     align: center;
+                     wrapCount: 10"
+              geometry="primitive: plane; width: auto; height: auto; "
+              material="color: #ffffff; shader: flat; visible: false"
+              event-set__enter="_event: mouseenter; scale: 6 6 6"
+              event-set__leave="_event: mouseleave; scale: 5 5 5"
+              animation="property: position;
+                         to: 0 5 -12;
+                         dir: alternate;
+                         dur: 3000;
+                         easing: linear;
+                         loop: true;"
+              
+            
+                    ></a-entity>  -->
+    
+   
+<!-- ARROW NEXT-->  
+      
+      
+       <a-entity
+              position="4 2 -13.5"
+              scale="2 2 2"
+              text=" value: >;
+                     color: pink;
+                     align: center;
+                     wrapCount: 2"
+              geometry="primitive: plane; width: auto; height: auto; "
+              material="color: #ffffff; shader: flat; visible: false"
+             
+              animation="property: position;
+                         to: 5 2 -13.5;
+                         dir: alternate;
+                         dur: 3000;
+                         easing: linear;
+                         loop: true;"
+              
+            
+                    ></a-entity> 
+   
+     
+   <!-- ARROW FLOOR-->    
+      
+    <a-entity
+              position="0 0.1 -1"
+              rotatio="-90 0 90"
+              scale="5 5 5"
+              text=" value: ^;
+                     color: pink;
+                     align: center;
+                     wrapCount: 10"
+              geometry="primitive: plane; width: auto; height: auto; rotation: -90 0 90 "
+              material="color: #ffffff; shader: flat; visible: false"
+              
+              animation="property: position;
+                         to: 0 0.1 -2;
+                         dir: alternate;
+                         dur: 3000;
+                         easing: linear;
+                         loop: true;"
+              
+            
+                    ></a-entity>
+    
+    
+    
+    
+    
+    
+  
+      
+<!-- VIDEO 2 TEST -->
+    
+    
+    
+    
+    <a-video src="#depressed-video" width="10" height="5" position="0 4 -14">
+			<!-- Play/Pause -->
+			<a-image id="videoControls2" src="#play" position="-2.5 -3 0.5" scale="1 1 1"
+					 play-pause2>
+			</a-image>
+		</a-video>
+    
+    
+    
+ 
+    
+ <a-entity position="0 3 -14"  sound="src: #depressed-audio; autoplay: true; loop: true;
+               volume: 1;
+               refDistance: 1;
+               rollofFactor: 1;"
+         
+           
+           >
+ </a-entity> 
+    
+  
+ 
+      
+<!-- PILLARS SIDES
+
+   
+    
+       <a-video src="#depressed-video" width="10" height="5" position="0 3 -14" rotation="0 0 0" loop="true" on="click";
+                
+                
+    
+         
+       
+         
+         >
+      
+      </a-video> 
+
+-->
+      
+      <!-- RIGHT  -->
+      
+      <a-box 
+        position="5 3 -9"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #depressed5;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+      <a-box 
+        position="5 1.5 -6"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #depressed26;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+      <a-box 
+        position="5 1.5 -3"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #depressed4;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+      <!-- LEFT -->
+      
+      
+         <a-box 
+        position="-5 3 -12"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #depressed25;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+      <a-box 
+        position="-5 3 -9"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #depressed20;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+      <a-box 
+        position="-5 3 -6"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #depressed6;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+            
+      <a-box 
+        position="-5 3 -3"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #depressed7;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+    
+      
+      
+      
+      <!-- BACK -->
+      
+     
+      <a-box 
+        position="3 2 0"
+        opacity="1"
+        width="2"
+        height="4"
+        depth="2"
+        material="src: #depressed27;
+                  shader: flat;
+                  repeat: 1 2"
+       ></a-box>
+      
+      
+      <a-box 
+        position="-3 2 0"
+        opacity="1"
+        width="2"
+        height="4"
+        depth="2"
+        material="src: #depressed9;
+                  shader: flat;
+                  repeat: 1 2"
+       ></a-box>
+      
+  <a-box 
+        position="3 3 3"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #depressed10;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+      
+      <a-box 
+        position="-3 3 3"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #depressed11;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+  
+      
+<!-- CEILING -->        
+
+      
+<a-entity > 
+    
+  <a-box look-at="#cam-rig" rotation="90 0 0"
+        position="-3 7 0"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #depressed12;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+       <a-box look-at="#cam-rig"
+        position="0 7 0"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #depressed13;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      <a-box look-at="#cam-rig"
+        position="3 7 0"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #depressed14;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+   
+    
+      <a-box look-at="#cam-rig"
+        position="-3 7 -3"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #depressed15;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+       <a-box look-at="#cam-rig"
+        position="0 7 -3"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #depressed16;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      <a-box look-at="#cam-rig"
+        position="3 7 -3"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #depressed17;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      <a-box look-at="#cam-rig"
+        position="-3 7 -6"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #depressed18;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+       <a-box look-at="#cam-rig"
+        position="0 7 -6"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #depressed19;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      <a-box look-at="#cam-rig"
+        position="3 7 -6"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #depressed20;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      <a-box look-at="#cam-rig"
+        position="-3 7 -9"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #depressed21;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+       <a-box look-at="#cam-rig"
+        position="0 7 -9"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #depressed22;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      <a-box look-at="#cam-rig"
+        position="3 7 -9"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #depressed23;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      
+        <a-box look-at="#cam-rig"
+        position="-3 7 -12"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #depressed24;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+       <a-box look-at="#cam-rig"
+        position="0 7 -12"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #depressed25;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      <a-box look-at="#cam-rig"
+        position="3 7 -12"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #depressed26;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      
+      
+ </a-entity>   
+      
+    
+    
+</a-entity> 
+      
+      
+      
+      
+      
+      
+      
+            
+      
+ <!-- MODULE 3  -->      
+    
+<a-entity position="22 0 -2.5"
+          rotation="0 -180 0">  
+    
+    
+    
+    
+    <!-- INTRODUCTION 3-->
+      
+    <a-entity
+              position="0 2 2"
+              scale="5 5 5"
+              text=" value: Memes can also, however, be very wholesome.
+                    They can shed a light into the more optimistic
+                    side of things, in an attempt to make the world 
+                    a better place
+                  ;
+                     color: pink;
+                     align: center;
+                     wrapCount: 100"
+              geometry="primitive: plane; width: 2; height: 2; "
+              material="color: #000000; shader: flat; visible: true"
+             
+            
+                    ></a-entity>   
+    
+    <a-entity
+              position="0 1 2.1"
+              scale="3 3 3"
+              text=" value: please walk through this poster 
+                    to continue the tour;
+                     color: pink;
+                     align: center;
+                     wrapCount: 100"
+              geometry="primitive: plane; width: 2; height: 2; "
+              material="color: #000000; shader: flat; visible: false"
+             
+            
+                    ></a-entity>
+    
+    
+    
+   
+    
+<!-- TEXT ABOVE VIDEO
+      
+   <a-entity
+              position="0 5.2 -12"
+              scale="5 5 5"
+              text=" value: Wholesome;
+                     color: pink;
+                     align: center;
+                     wrapCount: 10"
+              geometry="primitive: plane; width: auto; height: auto; "
+              material="color: #ffffff; shader: flat; visible: false"
+              event-set__enter="_event: mouseenter; scale: 6 6 6"
+              event-set__leave="_event: mouseleave; scale: 5 5 5"
+              animation="property: position;
+                         to: 0 5 -12;
+                         dir: alternate;
+                         dur: 3000;
+                         easing: linear;
+                         loop: true;"
+              
+            
+                    ></a-entity> -->
+    
+   
+<!-- ARROW NEXT-->  
+      
+     
+       <a-entity
+              position="4 2 -13.5"
+              scale="2 2 2"
+              text=" value: >;
+                     color: pink;
+                     align: center;
+                     wrapCount: 2"
+              geometry="primitive: plane; width: auto; height: auto; "
+              material="color: #ffffff; shader: flat; visible: false"
+             
+              animation="property: position;
+                         to: 5 2 -13.5;
+                         dir: alternate;
+                         dur: 3000;
+                         easing: linear;
+                         loop: true;"
+              
+            
+                    ></a-entity> 
+   
+     
+   <!-- ARROW FLOOR-->    
+      
+    <a-entity
+              position="0 0.1 -1"
+              rotatio="-90 0 90"
+              scale="5 5 5"
+              text=" value: ^;
+                     color: pink;
+                     align: center;
+                     wrapCount: 10"
+              geometry="primitive: plane; width: auto; height: auto; rotation: -90 0 90 "
+              material="color: #ffffff; shader: flat; visible: false"
+            
+              animation="property: position;
+                         to: 0 0.1 -2;
+                         dir: alternate;
+                         dur: 3000;
+                         easing: linear;
+                         loop: true;"
+              
+            
+                    ></a-entity>
+    
+  
+      
+<!-- VIDEO 2 TEST       
+  <a-video src="#wholesome-video" width="10" height="5" position="0 3 -14" rotation="0 0 0" autoplay="true" loop="true"
+    
+
+       
+         
+         >
+
+      
+      </a-video> 
+     -->
+
+   
+    
+    
+       
+    
+    <a-video src="#wholesome-video" width="10" height="5" position="0 4 -14">
+			<!-- Play/Pause -->
+			<a-image id="videoControls3" src="#play" position="-2.5 -3 0.5"scale="1 1 1"
+					 play-pause3>
+			</a-image>
+		</a-video>
+    
+    
+    
+    
+    <!--
+    
+    
+          <a-box mixin="look-at"
+        position="0 3 -13"
+        rotation="0 90 0"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="0.1"
+        material="src: #meme2;
+                  shader: flat;
+                  repeat: 1 1;
+                  "
+             
+        sound="src : #sound1;
+               on: click;
+               volume: 1;
+               refDistance: 1;
+               rollofFactor: 1"
+             
+        
+        ></a-box>
+    
+    <a-sound 
+    material="opacity:1" 
+    geometry="primitive:box"
+    position="1 1 1"
+    scale="1 1 1"
+    src="#sound1" 
+    on="click">
+</a-sound> -->
+    
+      
+<!-- PILLARS SIDES -->
+      
+      <!-- RIGHT  -->
+      
+      <a-box 
+        position="5 3 -9"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="3.2"
+        material="src: #wholesome1;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+      <a-box 
+        position="5 1.5 -6"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #wholesome2;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+      <a-box 
+        position="5 1.5 -3"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="3.5"
+        material="src: #wholesome17;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+      <!-- LEFT -->
+      
+      
+         <a-box 
+        position="-5 3 -12"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #wholesome4;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+      <a-box 
+        position="-5 3 -9"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="3"
+        material="src: #wholesome16;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+      <a-box 
+        position="-5 3 -6"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #wholesome6;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+            
+      <a-box 
+        position="-5 3 -3"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="3"
+        material="src: #wholesome14;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+    
+      
+      
+      
+      <!-- BACK -->
+      
+     
+      <a-box 
+        position="3 2 0"
+        opacity="1"
+        width="2"
+        height="4"
+        depth="2"
+        material="src: #wholesome15;
+                  shader: flat;
+                  repeat: 1 2"
+       ></a-box>
+      
+      
+      <a-box 
+        position="-3 2 0"
+        opacity="1"
+        width="2"
+        height="4"
+        depth="2"
+        material="src: #wholesome9;
+                  shader: flat;
+                  repeat: 1 2"
+       ></a-box>
+      
+  <a-box 
+        position="3 3 2"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #wholesome19;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+      
+      <a-box 
+        position="-3 3 3"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #wholesome11;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+  
+      
+<!-- CEILING -->        
+
+      
+<a-entity > 
+    
+  <a-box look-at="#cam-rig"
+        position="-3 7 0"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #wholesome12;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+       <a-box look-at="#cam-rig"
+        position="0 7 0"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #wholesome13;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      <a-box look-at="#cam-rig"
+        position="3 7 0"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #wholesome14;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+   
+    
+      <a-box look-at="#cam-rig"
+        position="-3 7 -3"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #wholesome15;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+       <a-box look-at="#cam-rig"
+        position="0 7 -3"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #wholesome16;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      <a-box look-at="#cam-rig"
+        position="3 7 -3"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #wholesome17;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      <a-box look-at="#cam-rig"
+        position="-3 7 -6"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #wholesome18;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+       <a-box look-at="#cam-rig"
+        position="0 7 -6"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #wholesome19;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      <a-box look-at="#cam-rig"
+        position="3 7 -6"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #wholesome20;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      <a-box look-at="#cam-rig"
+        position="-3 7 -9"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #wholesome21;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+       <a-box look-at="#cam-rig"
+        position="0 7 -9"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #wholesome22;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      <a-box look-at="#cam-rig"
+        position="3 7 -9"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #wholesome23;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      
+        <a-box look-at="#cam-rig"
+        position="-3 7 -12"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #wholesome24;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+       <a-box look-at="#cam-rig"
+        position="0 7 -12"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #wholesome17;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      <a-box look-at="#cam-rig"
+        position="3 7 -12"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #wholesome16;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      
+      
+ </a-entity>   
+      
+    
+    
+</a-entity> 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+          
+      
+ <!-- MODULE 4 -->       
+    
+<a-entity position="12 0 9.5"
+          rotation="0 -270 0">  
+    
+    
+      
+    
+    <!-- INTRODUCTION 4-->
+      
+    <a-entity
+              position="0 2 2"
+              scale="5 5 5"
+              text=" value: Memes have mutated and change a lot
+                    in the last decade. In the next room there are 
+                    some of the first internet memes. Note that
+                    they are considerably more simple and direct
+                  ;
+                     color: pink;
+                     align: center;
+                     wrapCount: 100"
+              geometry="primitive: plane; width: 2; height: 2; "
+              material="color: #000000; shader: flat; visible: true"
+             
+            
+                    ></a-entity>   
+    
+    <a-entity
+              position="0 1 2.1"
+              scale="3 3 3"
+              text=" value: please walk through this poster 
+                    to continue the tour;
+                     color: pink;
+                     align: center;
+                     wrapCount: 100"
+              geometry="primitive: plane; width: 2; height: 2; "
+              material="color: #000000; shader: flat; visible: false"
+             
+            
+                    ></a-entity>
+    
+    
+    
+   
+    
+   
+    
+<!-- TEXT ABOVE VIDEO
+   <a-entity
+              position="0 5.2 -12"
+              scale="5 5 5"
+              text=" value: Old;
+                     color: pink;
+                     align: center;
+                     wrapCount: 10"
+              geometry="primitive: plane; width: auto; height: auto; "
+              material="color: #ffffff; shader: flat; visible: false"
+              event-set__enter="_event: mouseenter; scale: 6 6 6"
+              event-set__leave="_event: mouseleave; scale: 5 5 5"
+              animation="property: position;
+                         to: 0 5 -12;
+                         dir: alternate;
+                         dur: 3000;
+                         easing: linear;
+                         loop: true;"
+              
+            
+                    ></a-entity>  -->
+    
+   
+<!-- ARROW NEXT-->  
+      
+   
+       <a-entity
+              position="4 2 -13.5"
+              scale="2 2 2"
+              text=" value: >;
+                     color: pink;
+                     align: center;
+                     wrapCount: 2"
+              geometry="primitive: plane; width: auto; height: auto; "
+              material="color: #ffffff; shader: flat; visible: false"
+             
+              animation="property: position;
+                         to: 5 2 -13.5;
+                         dir: alternate;
+                         dur: 3000;
+                         easing: linear;
+                         loop: true;"
+              
+            
+                    ></a-entity> 
+   
+     
+   <!-- ARROW FLOOR-->    
+      
+    <a-entity
+              position="0 0.1 -1"
+              rotatio="-90 0 90"
+              scale="5 5 5"
+              text=" value: ^;
+                     color: pink;
+                     align: center;
+                     wrapCount: 10"
+              geometry="primitive: plane; width: auto; height: auto; rotation: -90 0 90 "
+              material="color: #ffffff; shader: flat; visible: false"
+              event-set__enter="_event: mouseenter; text.color: blue"
+              event-set__leave="_event: mouseleave; text.color: pink"
+              animation="property: position;
+                         to: 0 0.1 -2;
+                         dir: alternate;
+                         dur: 3000;
+                         easing: linear;
+                         loop: true;"
+              
+            
+                    ></a-entity>
+    
+  
+      
+<!-- VIDEO 4 TEST  
+
+
+
+
+
+
+    
+     <a-entity position="0 3 -14"  sound="src: #old-audio; autoplay: true; loop: true;
+               volume: 1;
+               refDistance: 1;
+               rollofFactor: 1;"
+               ></a-entity> 
+    
+ 
+  
+    <a-entity geometry="primitive: plane" material="src: #old-video; shader: flat"
+          position="0 3 -13" sound="src: #old-sound; autoplay: true positional: true loop: true;
+               volume: 10;
+               refDistance: 0.2;
+               rollofFactor: 0.2;"></a-entity> 
+
+
+   <a-video src="#old-video" width="10" height="5" position="0 3 -14" rotation="0 0 0" autoplay="true" loop="true"
+            
+            
+            
+         
+         >
+      
+      </a-video> 
+    
+    <a-entity
+              position="0 3 -14"
+               sound="src: #old-audio; autoplay: true; loop: true;
+               volume: 1;
+               refDistance: 0.1;
+               rollofFactor: 0.1;"
+    
+              
+              ></a-entity>
+
+
+
+sound="src: #old-audio; autoplay: true; loop: true;
+               volume: 1;
+               refDistance: 0.1;
+               rollofFactor: 0.1;"
+
+-->
+    
+    
+  
+
+    
+     
+    
+    <a-video src="#old-video" width="10" height="5" position="0 4 -13"  >
+			<!-- Play/Pause -->
+			<a-image id="videoControls4" src="#play" position="-2.5 -3 0.5" scale="1 1 1"
+					 play-pause4>
+			</a-image>
+		</a-video>
+    
+    
+
+
+  
+
+    
+      
+<!-- PILLARS SIDES -->
+      
+      <!-- RIGHT  -->
+      
+      <a-box 
+        position="5 3 -9"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #old1;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+      <a-box 
+        position="5 1.5 -6"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #old5;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+      <a-box 
+        position="5 1.5 -3"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #old14;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+      <!-- LEFT -->
+      
+      
+         <a-box 
+        position="-5 3 -12"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #old4;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+      <a-box 
+        position="-5 3 -9"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #old2;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+      <a-box 
+        position="-5 3 -6"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #old6;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+            
+      <a-box 
+        position="-5 3 -3"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #old7;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+    
+      
+      
+      
+      <!-- BACK -->
+      
+     
+      <a-box 
+        position="3 2 0"
+        opacity="1"
+        width="2"
+        height="4"
+        depth="2"
+        material="src: #old24;
+                  shader: flat;
+                  repeat: 1 2"
+       ></a-box>
+      
+      
+      <a-box 
+        position="-3 2 0"
+        opacity="1"
+        width="2"
+        height="4"
+        depth="2"
+        material="src: #old12;
+                  shader: flat;
+                  repeat: 1 2"
+       ></a-box>
+      
+  <a-box 
+        position="3 3 3"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #old10;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+      
+      <a-box 
+        position="-3 3 3"
+        opacity="1"
+        width="2"
+        height="6"
+        depth="2"
+        material="src: #old11;
+                  shader: flat;
+                  repeat: 1 3"
+       ></a-box>
+      
+  
+      
+<!-- CEILING -->        
+
+      
+<a-entity > 
+    
+  <a-box look-at="#cam-rig"
+        position="-3 7 0"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #old9;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+       <a-box look-at="#cam-rig"
+        position="0 7 0"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #old13;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      <a-box look-at="#cam-rig"
+        position="3 7 0"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #old14;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+   
+    
+      <a-box look-at="#cam-rig"
+        position="-3 7 -3"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #old15;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+       <a-box look-at="#cam-rig"
+        position="0 7 -3"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #old16;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      <a-box look-at="#cam-rig"
+        position="3 7 -3"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #old17;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      <a-box look-at="#cam-rig"
+        position="-3 7 -6"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #old18;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+       <a-box look-at="#cam-rig"
+        position="0 7 -6"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #old19;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      <a-box look-at="#cam-rig"
+        position="3 7 -6"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #old20;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      <a-box look-at="#cam-rig"
+        position="-3 7 -9"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #old21;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+       <a-box look-at="#cam-rig"
+        position="0 7 -9"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #old22;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      <a-box look-at="#cam-rig"
+        position="3 7 -9"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #old23;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      
+        <a-box look-at="#cam-rig"
+        position="-3 7 -12"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #old24;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+       <a-box look-at="#cam-rig"
+        position="0 7 -12"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #old25;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+      <a-box look-at="#cam-rig"
+        position="3 7 -12"
+        opacity="1"
+        width="2"
+        height="2"
+        depth="2"
+        material="src: #old1;
+                  shader: flat;
+                  repeat: 1 1"
+       ></a-box>
+  
+    
+    
+    
+ 
+      
+ </a-entity>   
+      
+    
+    
+</a-entity> 
+      
+    
+</a-entity>    
+            
+      
+      
+       <!--  
+
+
+   sound="src : #sound1;
+               on: click;
+               volume: 1;
+               refDistance: 1;
+               rollofFactor: 1"
+
+
+
+
+
+
+<a-entity 
+                id="cam-rig"
+                movement-controls="controls: checkpoint"
+                checkpoint-controls="mode: animate">
+
+            <a-entity progressive-controls></a-entity>
+      
+      </a-entity>
+
+
+
+
+
+  
+       <a-entity id="camera" camera="userHeight: 1.6" look-controls cursor="rayOrigin: mouse"></a-entity>
+-->
+      
+      
+       
+      
+      
+  <!--      
+    <a-box color="yellow" position="1 0 -3"
+        
+            sound="src : #sound1;
+               on: triggerdown;
+               volume: 1;
+               refDistance: 1;
+               rollofFactor: 1"  >
+           
+         
+            <a-animation attribute="rotation"
+               dur="3000"
+               fill="forwards"
+               to="0 360 0"
+               direction="alternate"
+               begin="click"></a-animation>
+           
+         </a-box>
+    
+      
+      
+      
+         <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow
+             event-set__enter="_event: mouseenter; color: #026fc9"
+             event-set__leave="_event: mouseleave; color: #4CC3D9">
+        <!-- This animation begins when the box is clicked with the mouse. 
+       
+      
+      
+      
+      <a-animation attribute="rotation"
+               dur="3000"
+               fill="forwards"
+               to="0 360 0"
+               direction="alternate"
+               begin="click"></a-animation>
+      </a-box>
+      -->
+      
+      
+      
+      
+ <!--   <a-entity id="cameraRig">
+      <a-camera />
+      <a-entity
+        teleport-controls="cameraRig: #cameraRig"
+        gearvr-controls
+        oculus-go-controls
+        progressive-controls 
+        laser-controls
+        wasd-controls
+        
+       ></a-entity>
+    </a-entity>
+
+        
+ <a-entity oculus-go-controls="hand: left"></a-entity>
+ <a-entity oculus-go-controls="hand: right"></a-entity>
+  -->
+    
+    
+      
+      
+      
+
+      
+      
+      
+      
+    
+    </a-scene>
+</body>
